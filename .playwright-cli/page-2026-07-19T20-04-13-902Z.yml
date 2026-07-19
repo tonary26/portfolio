@@ -1,0 +1,345 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: STRIVERDEV
+      - generic [ref=e7]: DIGITAL WORKSHOP · 2026
+    - generic [ref=e8]:
+      - generic [ref=e9]: S
+      - paragraph [ref=e12]: Собираем проекты
+    - strong [ref=e16]: 057%
+  - generic [ref=e17]:
+    - banner [ref=e18]:
+      - button "STRIVER DEV" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: STRIVER
+        - generic [ref=e21]: DEV
+      - navigation [ref=e22]:
+        - button "Проекты" [ref=e23] [cursor=pointer]
+        - button "Компетенции" [ref=e24] [cursor=pointer]
+        - button "Контакты" [ref=e25] [cursor=pointer]
+    - main [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e29]: BUILD / TEST / SHIP
+        - paragraph [ref=e33]: SOFTWARE DEVELOPER · 2026
+        - heading "Создаём цифровые продукты" [level=1] [ref=e34]:
+          - generic [ref=e35]: СОЗДАЁМ
+          - generic [ref=e37]: ПРОДУКТЫ
+        - generic [ref=e39]:
+          - paragraph [ref=e40]: Telegram-боты, веб-сервисы и интерфейсы, которые не заканчиваются на красивом макете.
+          - button "Смотреть работы ↓" [ref=e41] [cursor=pointer]:
+            - text: Смотреть работы
+            - generic [ref=e42]: ↓
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - paragraph [ref=e45]: 01 / ПОДХОД
+          - generic [ref=e46]:
+            - heading "От идеи до работающего процесса." [level=2] [ref=e47]
+            - paragraph [ref=e48]: Проектируем интерфейс, связываем API, настраиваем окружение и проверяем реальный сценарий пользователя. Код, дизайн и запуск — одна работа, а не три разрозненных этапа.
+        - generic [ref=e50]:
+          - generic [ref=e51]: VUE.JS · PYTHON · LARAVEL · TELEGRAM API · DOCKER · PINIA · GSAP · BYBIT · WORDPRESS ·
+          - generic [ref=e52]: VUE.JS · PYTHON · LARAVEL · TELEGRAM API · DOCKER · PINIA · GSAP · BYBIT · WORDPRESS ·
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - paragraph [ref=e56]: 02 / ИЗБРАННЫЕ РАБОТЫ
+              - heading "Проекты" [level=2] [ref=e57]
+            - tablist "Фильтр проектов" [ref=e58]:
+              - tab "Все проекты" [selected] [ref=e59] [cursor=pointer]
+              - tab "Web-системы" [ref=e60] [cursor=pointer]
+              - tab "Telegram-боты" [ref=e61] [cursor=pointer]
+          - generic [ref=e62]:
+            - article [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]:
+                  - generic [ref=e66]:
+                    - generic [ref=e67]: Веб-сайт
+                    - generic [ref=e68]: "2026"
+                  - heading "Гостиница «Рай»" [level=3] [ref=e69]
+                  - paragraph [ref=e70]: Премиальный сайт гостиницы в Тетюшах
+                  - paragraph [ref=e71]: Каталог номеров и банных комплексов с живой фотогалереей, фильтрами, полноэкранным просмотром и прямым сценарием бронирования.
+                  - generic [ref=e72]:
+                    - generic [ref=e73]: Vue 3
+                    - generic [ref=e74]: Vue Router
+                    - generic [ref=e75]: Vite
+                    - generic [ref=e76]: WebP
+                  - generic [ref=e77]:
+                    - button "Подробнее о проекте Гостиница «Рай»" [ref=e78] [cursor=pointer]:
+                      - generic [ref=e79]: Подробнее о проекте
+                      - generic [ref=e80]: →
+                    - link "Открыть сайт ↗" [ref=e81] [cursor=pointer]:
+                      - /url: https://xn----8sbigpca3bh4afbf3dua9g.xn--p1ai/
+                      - text: Открыть сайт
+                      - generic [ref=e82]: ↗
+                - generic [ref=e84]:
+                  - generic [ref=e85]: гостиница-рай.рф
+                  - generic [ref=e91]:
+                    - generic [ref=e92]: ТЕТЮШИ · БЕРЕГ ВОЛГИ
+                    - strong [ref=e93]: Гостиница «Рай»
+            - article [ref=e94]:
+              - generic [ref=e95]:
+                - generic [ref=e96]:
+                  - generic [ref=e97]:
+                    - generic [ref=e98]: Full-stack платформа
+                    - generic [ref=e99]: "2026"
+                  - heading "VisaFlow" [level=3] [ref=e100]
+                  - paragraph [ref=e101]: Очередь заявок и защищённый кабинет
+                  - paragraph [ref=e102]: "Vue-интерфейс, связанный с Laravel API: регистрация по коду, Sanctum-сессии, восстановление доступа и управление визовыми заявками."
+                  - generic [ref=e103]:
+                    - generic [ref=e104]: Vue 3
+                    - generic [ref=e105]: Pinia
+                    - generic [ref=e106]: Axios
+                    - generic [ref=e107]: GSAP
+                  - button "Подробнее о проекте VisaFlow" [ref=e109] [cursor=pointer]:
+                    - generic [ref=e110]: Подробнее о проекте
+                    - generic [ref=e111]: →
+                - generic [ref=e113]:
+                  - generic [ref=e114]: secure.visaflow
+                  - generic [ref=e119]:
+                    - generic [ref=e120]:
+                      - generic [ref=e121]: VISAFLOW
+                      - generic [ref=e123]: AUTH / QUEUE / API
+                    - generic [ref=e124]:
+                      - generic [ref=e125]: НОВЫЙ ДОСТУП
+                      - strong [ref=e126]: Заявка на визу
+                      - button [ref=e129] [cursor=pointer]: ДОБАВИТЬ В ОЧЕРЕДЬ
+            - article [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e132]:
+                  - generic [ref=e133]:
+                    - generic [ref=e134]: WordPress-система
+                    - generic [ref=e135]: "2026"
+                  - heading "Tenant System" [level=3] [ref=e136]
+                  - paragraph [ref=e137]: Кабинеты владельцев, арендаторов и специалистов
+                  - paragraph [ref=e138]: "Расширение действующего WordPress-сайта: квартиры, роли, квитанции, уведомления и единый защищённый вход."
+                  - generic [ref=e139]:
+                    - generic [ref=e140]: WordPress
+                    - generic [ref=e141]: PHP
+                    - generic [ref=e142]: REST API
+                    - generic [ref=e143]: JavaScript
+                  - button "Подробнее о проекте Tenant System" [ref=e145] [cursor=pointer]:
+                    - generic [ref=e146]: Подробнее о проекте
+                    - generic [ref=e147]: →
+                - generic [ref=e149]:
+                  - generic [ref=e150]: TS
+                  - generic [ref=e155]:
+                    - text: ОБЪЕКТЫ
+                    - strong [ref=e156]: Мои квартиры
+                    - generic [ref=e157]:
+                      - generic [ref=e158]: "01"
+                      - generic [ref=e159]: Квартира · Петроградский район
+                      - generic [ref=e160]: АКТИВНА
+                    - generic [ref=e161]:
+                      - generic [ref=e162]: "02"
+                      - generic [ref=e163]: Квартира · Центральный район
+                      - generic [ref=e164]: АКТИВНА
+            - article [ref=e165]:
+              - generic [ref=e166]:
+                - generic [ref=e167]:
+                  - generic [ref=e168]:
+                    - generic [ref=e169]: Telegram / Trading
+                    - generic [ref=e170]: "2026"
+                  - heading "Smart Money Scanner" [level=3] [ref=e171]
+                  - paragraph [ref=e172]: Автоскан Bybit и поэтапные SMC-сигналы
+                  - paragraph [ref=e173]: Бот сам формирует рынок из ликвидных USDT-перпетуалов и отслеживает структурные торговые сетапы без ручного списка монет.
+                  - generic [ref=e174]:
+                    - generic [ref=e175]: Python
+                    - generic [ref=e176]: aiogram
+                    - generic [ref=e177]: Bybit V5
+                    - generic [ref=e178]: Pandas
+                  - button "Подробнее о проекте Smart Money Scanner" [ref=e180] [cursor=pointer]:
+                    - generic [ref=e181]: Подробнее о проекте
+                    - generic [ref=e182]: →
+                - generic [ref=e184]:
+                  - generic [ref=e185]:
+                    - generic [ref=e186]: LIVE PROCESS
+                    - generic [ref=e187]: "2026"
+                  - generic [ref=e188]:
+                    - generic [ref=e189]: MARKET
+                    - generic [ref=e191]: FILTER
+                    - generic [ref=e193]: TELEGRAM
+                  - generic [ref=e194]:
+                    - paragraph [ref=e195]:
+                      - generic [ref=e196]: ●
+                      - text: service active
+                    - paragraph [ref=e197]:
+                      - text: scan cycle
+                      - emphasis [ref=e198]: 00:05
+                    - paragraph [ref=e199]:
+                      - text: events routed
+                      - emphasis [ref=e200]: OK
+            - article [ref=e201]:
+              - generic [ref=e202]:
+                - generic [ref=e203]:
+                  - generic [ref=e204]:
+                    - generic [ref=e205]: Связка ботов
+                    - generic [ref=e206]: "2026"
+                  - heading "Short Bot Suite" [level=3] [ref=e207]
+                  - paragraph [ref=e208]: Сигналы, памп-аналитика и общий журнал
+                  - paragraph [ref=e209]: "Два связанных Telegram-бота: первый находит SHORT-сетапы, второй исследует историю пампов, RSI, ATR и объёмы."
+                  - generic [ref=e210]:
+                    - generic [ref=e211]: Python
+                    - generic [ref=e212]: CCXT
+                    - generic [ref=e213]: Bybit
+                    - generic [ref=e214]: Excel
+                  - button "Подробнее о проекте Short Bot Suite" [ref=e216] [cursor=pointer]:
+                    - generic [ref=e217]: Подробнее о проекте
+                    - generic [ref=e218]: →
+                - generic [ref=e220]:
+                  - generic [ref=e221]:
+                    - generic [ref=e222]: LIVE PROCESS
+                    - generic [ref=e223]: "2026"
+                  - generic [ref=e224]:
+                    - generic [ref=e225]: MARKET
+                    - generic [ref=e227]: FILTER
+                    - generic [ref=e229]: TELEGRAM
+                  - generic [ref=e230]:
+                    - paragraph [ref=e231]:
+                      - generic [ref=e232]: ●
+                      - text: service active
+                    - paragraph [ref=e233]:
+                      - text: scan cycle
+                      - emphasis [ref=e234]: 00:05
+                    - paragraph [ref=e235]:
+                      - text: events routed
+                      - emphasis [ref=e236]: OK
+            - article [ref=e237]:
+              - generic [ref=e238]:
+                - generic [ref=e239]:
+                  - generic [ref=e240]:
+                    - generic [ref=e241]: Telegram / Markets
+                    - generic [ref=e242]: "2026"
+                  - heading "Twelve Markets Bot" [level=3] [ref=e243]
+                  - paragraph [ref=e244]: Сигналы по валютам и металлам через Twelve Data
+                  - paragraph [ref=e245]: Рыночный слой перенесён с Bybit на Twelve Data без изменения SMC-движка; добавлены удобные команды и сводка в Telegram.
+                  - generic [ref=e246]:
+                    - generic [ref=e247]: Python
+                    - generic [ref=e248]: Twelve Data API
+                    - generic [ref=e249]: Telegram Bot API
+                    - generic [ref=e250]: Docker
+                  - button "Подробнее о проекте Twelve Markets Bot" [ref=e252] [cursor=pointer]:
+                    - generic [ref=e253]: Подробнее о проекте
+                    - generic [ref=e254]: →
+                - generic [ref=e256]:
+                  - generic [ref=e257]:
+                    - generic [ref=e258]: LIVE PROCESS
+                    - generic [ref=e259]: "2026"
+                  - generic [ref=e260]:
+                    - generic [ref=e261]: MARKET
+                    - generic [ref=e263]: FILTER
+                    - generic [ref=e265]: TELEGRAM
+                  - generic [ref=e266]:
+                    - paragraph [ref=e267]:
+                      - generic [ref=e268]: ●
+                      - text: service active
+                    - paragraph [ref=e269]:
+                      - text: scan cycle
+                      - emphasis [ref=e270]: 00:05
+                    - paragraph [ref=e271]:
+                      - text: events routed
+                      - emphasis [ref=e272]: OK
+            - article [ref=e273]:
+              - generic [ref=e274]:
+                - generic [ref=e275]:
+                  - generic [ref=e276]:
+                    - generic [ref=e277]: Telegram / P2P
+                    - generic [ref=e278]: "2026"
+                  - heading "Binance P2P Monitor" [level=3] [ref=e279]
+                  - paragraph [ref=e280]: Автоскан объявлений USDT / MDL
+                  - paragraph [ref=e281]: Монитор Binance P2P с фиксированным ценовым порогом, диапазонами лимитов, allowlist-доступом и управлением сканированием.
+                  - generic [ref=e282]:
+                    - generic [ref=e283]: Python
+                    - generic [ref=e284]: aiogram 3
+                    - generic [ref=e285]: Binance API
+                    - generic [ref=e286]: Docker
+                  - button "Подробнее о проекте Binance P2P Monitor" [ref=e288] [cursor=pointer]:
+                    - generic [ref=e289]: Подробнее о проекте
+                    - generic [ref=e290]: →
+                - generic [ref=e292]:
+                  - generic [ref=e293]:
+                    - generic [ref=e294]: LIVE PROCESS
+                    - generic [ref=e295]: "2026"
+                  - generic [ref=e296]:
+                    - generic [ref=e297]: MARKET
+                    - generic [ref=e299]: FILTER
+                    - generic [ref=e301]: TELEGRAM
+                  - generic [ref=e302]:
+                    - paragraph [ref=e303]:
+                      - generic [ref=e304]: ●
+                      - text: service active
+                    - paragraph [ref=e305]:
+                      - text: scan cycle
+                      - emphasis [ref=e306]: 00:05
+                    - paragraph [ref=e307]:
+                      - text: events routed
+                      - emphasis [ref=e308]: OK
+            - article [ref=e309]:
+              - generic [ref=e310]:
+                - generic [ref=e311]:
+                  - generic [ref=e312]:
+                    - generic [ref=e313]: Парсинг / Автоматизация
+                    - generic [ref=e314]: "2026"
+                  - heading "Parser & Broadcaster" [level=3] [ref=e315]
+                  - paragraph [ref=e316]: Сбор задач и безопасная рассылка по чатам
+                  - paragraph [ref=e317]: "Набор автоматизации для Telegram: парсер новых задач и отдельный Telethon-сервис для управляемой рассылки."
+                  - generic [ref=e318]:
+                    - generic [ref=e319]: Python
+                    - generic [ref=e320]: Telethon
+                    - generic [ref=e321]: Telegram API
+                    - generic [ref=e322]: State persistence
+                  - button "Подробнее о проекте Parser & Broadcaster" [ref=e324] [cursor=pointer]:
+                    - generic [ref=e325]: Подробнее о проекте
+                    - generic [ref=e326]: →
+                - generic [ref=e328]:
+                  - generic [ref=e329]:
+                    - generic [ref=e330]: LIVE PROCESS
+                    - generic [ref=e331]: "2026"
+                  - generic [ref=e332]:
+                    - generic [ref=e333]: MARKET
+                    - generic [ref=e335]: FILTER
+                    - generic [ref=e337]: TELEGRAM
+                  - generic [ref=e338]:
+                    - paragraph [ref=e339]:
+                      - generic [ref=e340]: ●
+                      - text: service active
+                    - paragraph [ref=e341]:
+                      - text: scan cycle
+                      - emphasis [ref=e342]: 00:05
+                    - paragraph [ref=e343]:
+                      - text: events routed
+                      - emphasis [ref=e344]: OK
+        - generic [ref=e345]:
+          - paragraph [ref=e346]: 03 / КОМПЕТЕНЦИИ
+          - generic [ref=e347]:
+            - heading "Web & UI" [level=3] [ref=e348]
+            - paragraph [ref=e349]: Vue, реактивные интерфейсы, API-интеграции, адаптивность, доступность и production-сборка.
+            - generic [ref=e350]: "01"
+          - generic [ref=e351]:
+            - heading "Telegram" [level=3] [ref=e352]
+            - paragraph [ref=e353]: Боты, парсеры, сигнал-системы, команды, состояния, уведомления и устойчивость к сбоям.
+            - generic [ref=e354]: "02"
+          - generic [ref=e355]:
+            - heading "Backend & Deploy" [level=3] [ref=e356]
+            - paragraph [ref=e357]: Laravel, WordPress, REST, базы данных, Docker Compose, Nginx и подготовка к VPS/хостингу.
+            - generic [ref=e358]: "03"
+      - generic [ref=e359]:
+        - paragraph [ref=e360]: 04 / СВЯЗЬ
+        - generic [ref=e361]:
+          - heading "Есть задача?" [level=2] [ref=e362]
+          - link "Обсудить в Telegram ↗" [ref=e363] [cursor=pointer]:
+            - /url: https://t.me/StriverDev
+            - text: Обсудить в Telegram
+            - generic [ref=e364]: ↗
+        - generic [ref=e365]:
+          - link "Telegram @StriverDev ↗" [ref=e366] [cursor=pointer]:
+            - /url: https://t.me/StriverDev
+            - generic [ref=e367]: Telegram
+            - generic [ref=e368]: "@StriverDev"
+            - generic [ref=e369]: ↗
+          - link "Email striverdev@gmail.com ↗" [ref=e370] [cursor=pointer]:
+            - /url: mailto:striverdev@gmail.com
+            - generic [ref=e371]: Email
+            - generic [ref=e372]: striverdev@gmail.com
+            - generic [ref=e373]: ↗
+        - generic [ref=e374]:
+          - generic [ref=e375]: © 2026 STRIVERDEV
+          - generic [ref=e376]: VUE / VITE / GSAP
+          - button "Наверх ↑" [ref=e377] [cursor=pointer]
