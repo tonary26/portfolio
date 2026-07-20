@@ -221,6 +221,8 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
   .service-intro h2 { max-width: 13ch; }
   .section-heading { align-items: flex-start; flex-direction: column; }
   .project-card__button { grid-template-columns: 1fr; }
+  .project-card__copy { order: 2; }
+  .project-visual { order: 1; }
   .project-card__copy { min-height: 330px; }
   .project-visual { min-height: 320px; }
   .capability-row { grid-template-columns: 1fr auto; }
