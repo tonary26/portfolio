@@ -16,7 +16,7 @@ export const projects = [
     stack: ['Vue 3', 'Vue Router', 'Vite', 'WebP', 'Responsive UI'],
     features: ['Адаптивный каталог и фильтры', 'Зацикленные свайп-карусели', 'Lightbox-галерея', 'Яндекс.Карты и прямой звонок'],
     visual: 'hotel',
-    media: new URL('../../gif/гостиница_рай.mp4', import.meta.url).href,
+    media: new URL('../../gif/hotel_rai.mp4', import.meta.url).href,
     link: 'https://xn----8sbigpca3bh4afbf3dua9g.xn--p1ai/',
     accent: 'coral',
   },
