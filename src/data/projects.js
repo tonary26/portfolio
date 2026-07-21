@@ -75,7 +75,7 @@ export const projects = [
     stack: ['Python', 'CCXT', 'Bybit', 'Excel', 'Docker Compose'],
     features: ['Общий журнал между контейнерами', '365 дней рыночной истории', 'ATR / RSI / Volume analytics', 'Очистка несуществующих символов'],
     visual: 'short',
-    media: new URL('../../gif/short-bot.mp4', import.meta.url).href,
+    media: new URL('../../gif/short-bot-suit.mp4', import.meta.url).href,
     accent: 'red',
   },
   {
@@ -103,7 +103,7 @@ export const projects = [
     stack: ['Python', 'Telegram Bot API', 'Market Data', 'Docker'],
     features: ['5 выбранных инструментов', 'Таймфрейм 15 минут', 'Дневные границы и объёмы', 'Отчёт по приближению к high / low'],
     visual: 'sol',
-    media: new URL('../../gif/SOL_Analytics_Bot.mp4', import.meta.url).href,
+    media: new URL('../../gif/sol.mp4', import.meta.url).href,
     accent: 'violet',
   },
   {
@@ -117,7 +117,7 @@ export const projects = [
     stack: ['Python', 'Twelve Data API', 'Telegram Bot API', 'Docker'],
     features: ['Forex и металлы', 'Команды /help и /summary', 'Корректная callback-маршрутизация', 'Конфигурируемый список инструментов'],
     visual: 'twelve',
-    media: new URL('../../gif/SOL_Analytics_Bot.mp4', import.meta.url).href,
+    media: new URL('../../gif/twelw.mp4', import.meta.url).href,
     accent: 'violet',
   },
   {
@@ -131,7 +131,7 @@ export const projects = [
     stack: ['Python', 'Bybit API', 'Telegram Bot API', 'Docker'],
     features: ['Сканирование всех активных USDT-фьючерсов', 'CHoCH вниз и Bearish Order Block', 'Уведомление о формировании сетапа', 'Подтверждённый SHORT-вход'],
     visual: 'smc-short',
-    media: new URL('../../gif/short-bot.mp4', import.meta.url).href,
+    media: new URL('../../gif/short-cmc.mp4', import.meta.url).href,
     accent: 'blue',
   },
   {
@@ -145,7 +145,7 @@ export const projects = [
     stack: ['Python', 'aiogram 3', 'Binance API', 'Docker'],
     features: ['Команды /run и /stop', 'Фильтр пересечения лимитов', 'Дедупликация объявлений', 'UTC+3 и VPS-деплой'],
     visual: 'p2p',
-    media: new URL('../../gif/smart-money.mp4', import.meta.url).href,
+    media: new URL('../../gif/Binance_P2P_Monitor.mp4', import.meta.url).href,
     accent: 'yellow',
   },
 ]
