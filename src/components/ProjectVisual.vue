@@ -5,7 +5,8 @@ defineProps({ project: { type: Object, required: true } })
 <template>
   <div class="project-visual" :class="`project-visual--${project.visual}`" aria-hidden="true">
     <div v-if="project.media" class="project-media">
-      <video :src="project.media" autoplay muted loop playsinline preload="metadata"></video>
+      <img v-if="project.mediaType === 'image'" :src="project.media" :alt="project.title" loading="lazy">
+      <video v-else :src="project.media" autoplay muted loop playsinline preload="metadata"></video>
     </div>
 
     <template v-else-if="project.visual === 'tenant'">
