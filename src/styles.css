@@ -216,10 +216,17 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
   from { opacity: 0.18; transform: translate3d(0, 72px, 0); }
   to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
-.project-card.reveal { opacity: 1; transform: translate3d(0, 58px, 0); }
-.project-card.reveal.is-visible { animation: project-card-in 0.88s var(--ease-out) both; }
-@keyframes project-card-in {
-  from { transform: translate3d(0, 58px, 0); }
+.project-card.reveal, .project-card.reveal.is-visible { opacity: 1; transform: none; animation: none; }
+.project-card.reveal .project-card__copy { transform: translate3d(-34px, 0, 0); }
+.project-card.reveal .project-visual { transform: translate3d(34px, 0, 0); }
+.project-card.reveal.is-visible .project-card__copy { animation: project-copy-in 0.82s var(--ease-out) both; }
+.project-card.reveal.is-visible .project-visual { animation: project-visual-in 0.88s var(--ease-out) both; }
+@keyframes project-copy-in {
+  from { transform: translate3d(-34px, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+@keyframes project-visual-in {
+  from { transform: translate3d(34px, 0, 0); }
   to { transform: translate3d(0, 0, 0); }
 }
 
@@ -271,7 +278,7 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-  .reveal, .project-card.reveal { opacity: 1; transform: none; }
+  .reveal, .project-card.reveal, .project-card.reveal .project-card__copy, .project-card.reveal .project-visual { opacity: 1; transform: none; }
 }
 
-.no-motion .reveal { opacity: 1; transform: none; }
+.no-motion .reveal, .no-motion .project-card__copy, .no-motion .project-visual { opacity: 1; transform: none; }
