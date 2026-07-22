@@ -23,7 +23,7 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKey); document.b
         <div class="drawer-features"><h3>Что реализовано</h3><ul><li v-for="feature in project.features" :key="feature">{{ feature }}</li></ul></div>
       </div>
       <div class="drawer-stack"><span v-for="item in project.stack" :key="item">{{ item }}</span></div>
-      <a v-if="project.link" class="drawer-site-link" :href="project.link" target="_blank" rel="noreferrer">Открыть готовый сайт <span>↗</span></a>
+      <a v-if="project.link" class="drawer-site-link directional-action directional-action--light" :href="project.link" target="_blank" rel="noreferrer"><span>Открыть готовый сайт</span><i aria-hidden="true">↗</i></a>
     </article>
   </div>
 </template>

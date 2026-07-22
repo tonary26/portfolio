@@ -1,12 +1,42 @@
 <script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+
 defineProps({ project: { type: Object, required: true } })
+
+const visual = ref(null)
+const mediaVideo = ref(null)
+let mediaObserver
+
+onMounted(() => {
+  if (!visual.value || !mediaVideo.value) return
+
+  mediaObserver = new IntersectionObserver(([entry]) => {
+    const video = mediaVideo.value
+    if (!video) return
+
+    if (entry.isIntersecting) {
+      video.preload = 'metadata'
+      video.play().catch(() => {})
+      return
+    }
+
+    video.pause()
+  }, { threshold: 0.05, rootMargin: '240px 0px' })
+
+  mediaObserver.observe(visual.value)
+})
+
+onBeforeUnmount(() => {
+  mediaObserver?.disconnect()
+  mediaVideo.value?.pause()
+})
 </script>
 
 <template>
-  <div class="project-visual" :class="`project-visual--${project.visual}`" aria-hidden="true">
+  <div ref="visual" class="project-visual" :class="`project-visual--${project.visual}`" aria-hidden="true">
     <div v-if="project.media" class="project-media">
       <img v-if="project.mediaType === 'image'" :src="project.media" :alt="project.title" loading="lazy">
-      <video v-else :src="project.media" autoplay muted loop playsinline preload="metadata"></video>
+      <video v-else ref="mediaVideo" :src="project.media" muted loop playsinline preload="none"></video>
     </div>
 
     <template v-else-if="project.visual === 'tenant'">

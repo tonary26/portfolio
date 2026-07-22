@@ -20,7 +20,7 @@ defineEmits(['open'])
           <button class="project-card__more" type="button" @click="$emit('open', project)" :aria-label="`Подробнее о проекте ${project.title}`">
             <span>Подробнее о проекте</span>
           </button>
-          <a v-if="project.link" class="project-card__external" :href="project.link" target="_blank" rel="noreferrer">
+          <a v-if="project.link" class="project-card__external directional-action directional-action--light" :href="project.link" target="_blank" rel="noreferrer">
             Открыть сайт <i>↗</i>
           </a>
         </div>
