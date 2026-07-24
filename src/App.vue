@@ -38,13 +38,20 @@ const setupReveals = () => {
   revealObserver?.disconnect()
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   document.documentElement.classList.toggle('no-motion', reduced)
+  document.documentElement.classList.toggle('motion-ready', !reduced)
+
+  if (reduced) {
+    document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'))
+    return
+  }
+
   revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return
       entry.target.classList.add('is-visible')
       revealObserver?.unobserve(entry.target)
     })
-  }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' })
+  }, { threshold: 0.01, rootMargin: '0px 0px 10% 0px' })
   document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element))
 }
 
