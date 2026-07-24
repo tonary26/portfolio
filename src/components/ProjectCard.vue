@@ -1,4 +1,5 @@
 <script setup>
+import ArrowIcon from './ArrowIcon.vue'
 import ProjectVisual from './ProjectVisual.vue'
 
 defineProps({
@@ -21,7 +22,7 @@ defineEmits(['open'])
             <span>Подробнее о проекте</span>
           </button>
           <a v-if="project.link" class="project-card__external directional-action directional-action--light" :href="project.link" target="_blank" rel="noreferrer">
-            Открыть сайт <i>↗</i>
+            Открыть сайт <i aria-hidden="true"><ArrowIcon /></i>
           </a>
         </div>
       </div>

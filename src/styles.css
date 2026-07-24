@@ -78,6 +78,10 @@ video { display: block; max-width: 100%; }
 .directional-action { --action-ink: var(--ink-inverse); --action-accent: var(--primary); position: relative; display: inline-grid; grid-template-columns: auto 32px; align-items: center; gap: 16px; min-height: 48px; border-bottom: 1px solid currentColor; color: var(--action-ink); font-size: 12px; font-weight: 800; line-height: 1; }
 .directional-action::before { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--action-accent); clip-path: inset(0 100% 0 0); transition: clip-path 0.42s var(--ease-out); }
 .directional-action i { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid currentColor; border-radius: 50%; font-style: normal; transition: color 0.32s ease, background 0.32s ease, border-color 0.32s ease, transform 0.36s var(--ease-out); }
+.arrow-icon { display: block; width: 14px; height: 14px; overflow: visible; transform: rotate(-45deg); }
+.arrow-icon path { vector-effect: non-scaling-stroke; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.arrow-icon--down { transform: rotate(90deg); }
+.arrow-icon--up { transform: rotate(-90deg); }
 .directional-action:hover::before, .directional-action:focus-visible::before { clip-path: inset(0); }
 .directional-action:hover i, .directional-action:focus-visible i { border-color: var(--action-accent); color: var(--dark); background: var(--action-accent); transform: translate(3px, -3px); }
 .directional-action--down:hover i, .directional-action--down:focus-visible i { transform: translateY(3px); }
@@ -252,8 +256,8 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
 
 @media (max-width: 620px) {
   .hero-section { padding-top: 110px; padding-bottom: 112px; }
-  .hero-title { font-size: clamp(40px, 11vw, 68px); line-height: 1; }
-  .hero-title__line > span { white-space: normal; }
+  .hero-title { font-size: clamp(28px, 8.5vw, 40px); line-height: 1.04; }
+  .hero-title__line > span { white-space: nowrap; }
   .section-pad { padding-top: 76px; padding-bottom: 76px; }
   .filter-tabs { width: 100%; border-radius: 12px; }
   .filter-tabs button { flex: 1; border-radius: 8px; padding: 0 10px; }

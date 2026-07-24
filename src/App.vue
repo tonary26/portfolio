@@ -1,6 +1,7 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import gsap from 'gsap'
+import ArrowIcon from './components/ArrowIcon.vue'
 import ProjectCard from './components/ProjectCard.vue'
 import ProjectDrawer from './components/ProjectDrawer.vue'
 import { filters, projects } from './data/projects'
@@ -124,7 +125,7 @@ onBeforeUnmount(() => {
           <span class="hero-title__line"><span>ОТ И<i class="hero-letter-de">Д</i>ЕИ –</span></span>
           <span class="hero-title__line hero-title__line--outline"><span><i class="hero-letter-de">Д</i>О ПРО<i class="hero-letter-de">Д</i><i class="hero-letter-a">А</i>КШЕНА</span></span>
         </h1>
-        <div class="hero-footer"><button class="directional-action directional-action--dark directional-action--down" type="button" @click="scrollTo('projects')"><span>Смотреть работы</span><i aria-hidden="true">↓</i></button></div>
+        <div class="hero-footer"><button class="directional-action directional-action--dark directional-action--down" type="button" @click="scrollTo('projects')"><span>Смотреть работы</span><i aria-hidden="true"><ArrowIcon direction="down" /></i></button></div>
       </section>
 
       <div class="paper-sheet">
@@ -153,7 +154,7 @@ onBeforeUnmount(() => {
       </div>
 
       <section id="contact" class="contact-section section-pad">
-        <div class="contact-title reveal"><h2>Есть задача?</h2><a class="directional-action directional-action--dark" href="https://t.me/DevSpaceWork" target="_blank" rel="noreferrer"><span>Обсудить в Telegram</span><i aria-hidden="true">↗</i></a></div>
+        <div class="contact-title reveal"><h2>Есть задача?</h2><a class="directional-action directional-action--dark" href="https://t.me/DevSpaceWork" target="_blank" rel="noreferrer"><span>Обсудить в Telegram</span><i aria-hidden="true"><ArrowIcon /></i></a></div>
         <div class="contact-links reveal">
           <div class="contact-links__row">
             <span>Telegram</span>
@@ -164,11 +165,11 @@ onBeforeUnmount(() => {
               <i>/</i>
               <a href="https://t.me/DevSpaceWork" target="_blank" rel="noreferrer">@DevSpaceWork</a>
             </b>
-            <i>↗</i>
+            <i aria-hidden="true"><ArrowIcon /></i>
           </div>
-          <a href="mailto:devspaceletters@gmail.com"><span>Email</span><b>devspaceletters@gmail.com</b><i>↗</i></a>
+          <a href="mailto:devspaceletters@gmail.com"><span>Email</span><b>devspaceletters@gmail.com</b><i aria-hidden="true"><ArrowIcon /></i></a>
         </div>
-        <footer><button class="directional-action directional-action--dark directional-action--up" type="button" @click="scrollTo('top')"><span>Наверх</span><i aria-hidden="true">↑</i></button></footer>
+        <footer><button class="directional-action directional-action--dark directional-action--up" type="button" @click="scrollTo('top')"><span>Наверх</span><i aria-hidden="true"><ArrowIcon direction="up" /></i></button></footer>
       </section>
     </main>
   </div>
