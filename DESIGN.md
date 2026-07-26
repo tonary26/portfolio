@@ -17,7 +17,7 @@ Technical workshop portfolio. Dark, high-contrast hero transitions into a true o
 
 ## Typography
 
-Display uses local `Arial Black`/Impact-style fallback for compact uppercase shapes. Body uses Arial/Helvetica-style humanist sans fallbacks; technical labels use Consolas. Display tracking never exceeds `-0.04em`.
+Display uses bundled `Inter` Black 900 (Cyrillic + Latin subsets via @fontsource, identical on every device) with local `Arial Black` fallback for compact uppercase shapes. Body uses Arial/Helvetica-style humanist sans fallbacks; technical labels use Consolas. Display tracking never exceeds `-0.04em`.
 
 ## Components
 

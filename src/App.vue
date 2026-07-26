@@ -1,5 +1,5 @@
 <script setup>
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import ArrowIcon from './components/ArrowIcon.vue'
 import ProjectCard from './components/ProjectCard.vue'
@@ -15,6 +15,7 @@ const mobileMenu = ref(false)
 let revealObserver
 let progressFrame
 let completionTimer
+const mobileQuery = window.matchMedia('(max-width: 620px)')
 
 const filteredProjects = computed(() => activeFilter.value === 'all'
   ? projects
@@ -37,22 +38,49 @@ const cardPosition = (index) => {
 const setupReveals = () => {
   revealObserver?.disconnect()
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const mobile = mobileQuery.matches
   document.documentElement.classList.toggle('no-motion', reduced)
   document.documentElement.classList.toggle('motion-ready', !reduced)
 
   if (reduced) {
-    document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'))
+    document.querySelectorAll('.reveal').forEach((element) => {
+      element.classList.add('is-visible', 'is-copy-visible', 'is-visual-visible')
+    })
     return
   }
+
+  // Карточка, открытая в одной раскладке, должна остаться видимой после смены
+  // брейкпоинта (поворот экрана): мобильные и десктопные классы видимости разные.
+  document.querySelectorAll('.project-card.reveal').forEach((card) => {
+    const shown = card.classList.contains('is-visible')
+      || (card.classList.contains('is-copy-visible') && card.classList.contains('is-visual-visible'))
+    if (shown) card.classList.add('is-visible', 'is-copy-visible', 'is-visual-visible')
+  })
 
   revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return
-      entry.target.classList.add('is-visible')
+      if (entry.target.classList.contains('project-card__copy')) {
+        entry.target.closest('.project-card')?.classList.add('is-copy-visible')
+      } else if (entry.target.classList.contains('project-visual')) {
+        entry.target.closest('.project-card')?.classList.add('is-visual-visible')
+      } else {
+        entry.target.classList.add('is-visible')
+      }
       revealObserver?.unobserve(entry.target)
     })
-  }, { threshold: 0.01, rootMargin: '0px 0px 10% 0px' })
-  document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element))
+  }, { threshold: 0.01, rootMargin: '0px 0px 18% 0px' })
+
+  document.querySelectorAll('.reveal').forEach((element) => {
+    if (mobile && element.classList.contains('project-card')) {
+      const copy = element.querySelector('.project-card__copy')
+      const visual = element.querySelector('.project-visual')
+      if (copy) revealObserver.observe(copy)
+      if (visual) revealObserver.observe(visual)
+      return
+    }
+    revealObserver.observe(element)
+  })
 }
 
 const animateHero = () => {
@@ -71,9 +99,10 @@ const scrollTo = (id) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
 
-watch(filteredProjects, async () => { await nextTick(); setupReveals() })
+const onBreakpointChange = () => setupReveals()
 
 onMounted(() => {
+  mobileQuery.addEventListener('change', onBreakpointChange)
   const startedAt = performance.now()
   const tickProgress = (now) => {
     progress.value = Math.min(100, Math.round((now - startedAt) / 8))
@@ -94,6 +123,7 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
+  mobileQuery.removeEventListener('change', onBreakpointChange)
   revealObserver?.disconnect()
   window.cancelAnimationFrame(progressFrame)
   window.clearTimeout(completionTimer)
@@ -140,7 +170,7 @@ onBeforeUnmount(() => {
 
         <section id="projects" class="projects-section section-pad">
           <div class="section-heading reveal"><h2>Проекты</h2><div class="filter-tabs" role="tablist" aria-label="Фильтр проектов"><button v-for="filter in filters" :key="filter.id" type="button" role="tab" :aria-selected="activeFilter === filter.id" :class="{ active: activeFilter === filter.id }" @click="setFilter(filter.id)">{{ filter.label }}</button></div></div>
-          <Transition name="filter-swap" mode="out-in">
+          <Transition name="filter-swap" mode="out-in" @after-enter="setupReveals">
             <div :key="activeFilter" class="project-list">
               <ProjectCard
                 v-for="(project, index) in filteredProjects"

@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
+import '@fontsource/inter/cyrillic-900.css'
+import '@fontsource/inter/latin-900.css'
 import App from './App.vue'
 import './styles.css'
 

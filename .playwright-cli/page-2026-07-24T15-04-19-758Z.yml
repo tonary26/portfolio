@@ -1,0 +1,223 @@
+- generic [ref=f5e2]:
+  - generic [ref=f5e3]:
+    - generic [ref=f5e4]: DEVSPACE
+    - generic [ref=f5e6]:
+      - generic [ref=f5e7]:
+        - generic [ref=f5e8]: D
+        - generic [ref=f5e9]:
+          - generic [ref=f5e10]: DEV
+          - emphasis [ref=f5e11]: SPACE
+      - paragraph [ref=f5e12]: Подготавливаем среду
+    - strong [ref=f5e16]: 8%
+  - generic [ref=f5e17]:
+    - banner [ref=f5e18]:
+      - button "DEV SPACE" [ref=f5e19] [cursor=pointer]:
+        - generic [ref=f5e20]: DEV
+        - generic [ref=f5e21]: SPACE
+      - navigation:
+        - button "Проекты"
+        - button "Компетенции"
+        - button "Контакты"
+      - button "Меню" [ref=f5e22] [cursor=pointer]
+    - main [ref=f5e25]:
+      - generic [ref=f5e26]:
+        - heading "От идеи – до продакшена" [level=1] [ref=f5e27]:
+          - generic [ref=f5e29]:
+            - text: ОТ И
+            - generic [ref=f5e30]: Д
+            - text: ЕИ –
+          - generic [ref=f5e32]:
+            - generic [ref=f5e33]: Д
+            - text: О ПРО
+            - generic [ref=f5e34]: Д
+            - generic [ref=f5e35]: А
+            - text: КШЕНА
+        - button "Смотреть работы" [ref=f5e37] [cursor=pointer]
+      - generic [ref=f5e42]:
+        - generic [ref=f5e44]:
+          - generic [ref=f5e45]: VUE.JS · PYTHON · LARAVEL · TELEGRAM API · DOCKER · PINIA · GSAP · BYBIT · WORDPRESS ·
+          - generic [ref=f5e46]: VUE.JS · PYTHON · LARAVEL · TELEGRAM API · DOCKER · PINIA · GSAP · BYBIT · WORDPRESS ·
+        - generic [ref=f5e47]:
+          - generic [ref=f5e48]:
+            - heading "Проекты" [level=2] [ref=f5e49]
+            - tablist "Фильтр проектов" [ref=f5e50]:
+              - tab "Все проекты" [selected] [ref=f5e51] [cursor=pointer]
+              - tab "Web-системы" [ref=f5e52] [cursor=pointer]
+              - tab "Telegram-боты" [ref=f5e53] [cursor=pointer]
+          - generic [ref=f5e54]:
+            - article [ref=f5e55]:
+              - generic [ref=f5e57]:
+                - generic [ref=f5e58]: Веб-сайт
+                - heading "Гостиница «Рай»" [level=3] [ref=f5e59]
+                - paragraph [ref=f5e60]: Премиальный сайт гостиницы в Тетюшах
+                - generic [ref=f5e61]:
+                  - generic [ref=f5e62]: Vue 3
+                  - generic [ref=f5e63]: Vue Router
+                  - generic [ref=f5e64]: Vite
+                  - generic [ref=f5e65]: WebP
+                - generic [ref=f5e66]:
+                  - button "Подробнее о проекте Гостиница «Рай»" [ref=f5e67] [cursor=pointer]:
+                    - generic [ref=f5e68]: Подробнее о проекте
+                  - link "Открыть сайт" [ref=f5e69] [cursor=pointer]:
+                    - /url: https://xn----8sbigpca3bh4afbf3dua9g.xn--p1ai/
+            - article [ref=f5e76]:
+              - generic [ref=f5e78]:
+                - generic [ref=f5e79]: WordPress-система
+                - heading "Tenant System" [level=3] [ref=f5e80]
+                - paragraph [ref=f5e81]: Кабинеты владельцев, арендаторов и специалистов
+                - generic [ref=f5e82]:
+                  - generic [ref=f5e83]: WordPress
+                  - generic [ref=f5e84]: PHP
+                  - generic [ref=f5e85]: REST API
+                  - generic [ref=f5e86]: JavaScript
+                - generic [ref=f5e87]:
+                  - button "Подробнее о проекте Tenant System" [ref=f5e88] [cursor=pointer]:
+                    - generic [ref=f5e89]: Подробнее о проекте
+                  - link "Открыть сайт" [ref=f5e90] [cursor=pointer]:
+                    - /url: https://9946783.ru/app/
+            - article [ref=f5e97]:
+              - generic [ref=f5e99]:
+                - generic [ref=f5e100]: Веб-сайт
+                - heading "Quoravo Moto" [level=3] [ref=f5e101]
+                - paragraph [ref=f5e102]: Интернет-магазин экипировки и аксессуаров для мотоциклов
+                - generic [ref=f5e103]:
+                  - generic [ref=f5e104]: WordPress
+                  - generic [ref=f5e105]: WooCommerce
+                  - generic [ref=f5e106]: Elementor
+                  - generic [ref=f5e107]: CSS
+                - generic [ref=f5e108]:
+                  - button "Подробнее о проекте Quoravo Moto" [ref=f5e109] [cursor=pointer]:
+                    - generic [ref=f5e110]: Подробнее о проекте
+                  - link "Открыть сайт" [ref=f5e111] [cursor=pointer]:
+                    - /url: https://quoravo.motorcycles/
+            - article [ref=f5e118]:
+              - generic [ref=f5e120]:
+                - generic [ref=f5e121]: WordPress / E-commerce
+                - heading "Motohelmets.shop" [level=3] [ref=f5e122]
+                - paragraph [ref=f5e123]: Двуязычный интернет-магазин мотошлемов для Испании и Европы
+                - generic [ref=f5e124]:
+                  - generic [ref=f5e125]: WordPress
+                  - generic [ref=f5e126]: WooCommerce
+                  - generic [ref=f5e127]: PHP 8.3
+                  - generic [ref=f5e128]: Polylang
+                - generic [ref=f5e129]:
+                  - button "Подробнее о проекте Motohelmets.shop" [ref=f5e130] [cursor=pointer]:
+                    - generic [ref=f5e131]: Подробнее о проекте
+                  - link "Открыть сайт" [ref=f5e132] [cursor=pointer]:
+                    - /url: https://motohelmets.shop/es/
+            - article [ref=f5e139]:
+              - generic [ref=f5e141]:
+                - generic [ref=f5e142]: Telegram / Trading
+                - heading "Smart Money Scanner" [level=3] [ref=f5e143]
+                - paragraph [ref=f5e144]: Автоскан Bybit и поэтапные SMC-сигналы
+                - generic [ref=f5e145]:
+                  - generic [ref=f5e146]: Python
+                  - generic [ref=f5e147]: aiogram
+                  - generic [ref=f5e148]: Bybit V5
+                  - generic [ref=f5e149]: Pandas
+                - button "Подробнее о проекте Smart Money Scanner" [ref=f5e151] [cursor=pointer]:
+                  - generic [ref=f5e152]: Подробнее о проекте
+            - article [ref=f5e156]:
+              - generic [ref=f5e158]:
+                - generic [ref=f5e159]: Связка ботов
+                - heading "Short Bot Suite" [level=3] [ref=f5e160]
+                - paragraph [ref=f5e161]: Сигналы, памп-аналитика и общий журнал
+                - generic [ref=f5e162]:
+                  - generic [ref=f5e163]: Python
+                  - generic [ref=f5e164]: CCXT
+                  - generic [ref=f5e165]: Bybit
+                  - generic [ref=f5e166]: Excel
+                - button "Подробнее о проекте Short Bot Suite" [ref=f5e168] [cursor=pointer]:
+                  - generic [ref=f5e169]: Подробнее о проекте
+            - article [ref=f5e173]:
+              - generic [ref=f5e175]:
+                - generic [ref=f5e176]: Telegram / Liquidity
+                - heading "Daily Liquidity Bot" [level=3] [ref=f5e177]
+                - paragraph [ref=f5e178]: Пробои high / low предыдущего дня
+                - generic [ref=f5e179]:
+                  - generic [ref=f5e180]: Python
+                  - generic [ref=f5e181]: Bybit API
+                  - generic [ref=f5e182]: Telegram Bot API
+                  - generic [ref=f5e183]: Docker
+                - button "Подробнее о проекте Daily Liquidity Bot" [ref=f5e185] [cursor=pointer]:
+                  - generic [ref=f5e186]: Подробнее о проекте
+            - article [ref=f5e190]:
+              - generic [ref=f5e192]:
+                - generic [ref=f5e193]: Telegram / Analytics
+                - heading "SOL Analytics Bot" [level=3] [ref=f5e194]
+                - paragraph [ref=f5e195]: Отчёт по SOL, ZEC, HYPE, XAU и XAG
+                - generic [ref=f5e196]:
+                  - generic [ref=f5e197]: Python
+                  - generic [ref=f5e198]: Telegram Bot API
+                  - generic [ref=f5e199]: Market Data
+                  - generic [ref=f5e200]: Docker
+                - button "Подробнее о проекте SOL Analytics Bot" [ref=f5e202] [cursor=pointer]:
+                  - generic [ref=f5e203]: Подробнее о проекте
+            - article [ref=f5e207]:
+              - generic [ref=f5e209]:
+                - generic [ref=f5e210]: Telegram / Markets
+                - heading "Twelve Markets Bot" [level=3] [ref=f5e211]
+                - paragraph [ref=f5e212]: Сигналы по валютам и металлам через Twelve Data
+                - generic [ref=f5e213]:
+                  - generic [ref=f5e214]: Python
+                  - generic [ref=f5e215]: Twelve Data API
+                  - generic [ref=f5e216]: Telegram Bot API
+                  - generic [ref=f5e217]: Docker
+                - button "Подробнее о проекте Twelve Markets Bot" [ref=f5e219] [cursor=pointer]:
+                  - generic [ref=f5e220]: Подробнее о проекте
+            - article [ref=f5e224]:
+              - generic [ref=f5e226]:
+                - generic [ref=f5e227]: Telegram / SMC Short
+                - heading "SMC Short Scanner" [level=3] [ref=f5e228]
+                - paragraph [ref=f5e229]: Структурные SHORT-сетапы по Bybit
+                - generic [ref=f5e230]:
+                  - generic [ref=f5e231]: Python
+                  - generic [ref=f5e232]: Bybit API
+                  - generic [ref=f5e233]: Telegram Bot API
+                  - generic [ref=f5e234]: Docker
+                - button "Подробнее о проекте SMC Short Scanner" [ref=f5e236] [cursor=pointer]:
+                  - generic [ref=f5e237]: Подробнее о проекте
+            - article [ref=f5e241]:
+              - generic [ref=f5e243]:
+                - generic [ref=f5e244]: Telegram / P2P
+                - heading "Binance P2P Monitor" [level=3] [ref=f5e245]
+                - paragraph [ref=f5e246]: Автоскан объявлений USDT / MDL
+                - generic [ref=f5e247]:
+                  - generic [ref=f5e248]: Python
+                  - generic [ref=f5e249]: aiogram 3
+                  - generic [ref=f5e250]: Binance API
+                  - generic [ref=f5e251]: Docker
+                - button "Подробнее о проекте Binance P2P Monitor" [ref=f5e253] [cursor=pointer]:
+                  - generic [ref=f5e254]: Подробнее о проекте
+        - generic [ref=f5e258]:
+          - generic [ref=f5e259]:
+            - heading "Web & UI" [level=3] [ref=f5e260]
+            - paragraph [ref=f5e261]: Vue, API-интеграции, адаптивность и production-сборка.
+          - generic [ref=f5e262]:
+            - heading "Telegram" [level=3] [ref=f5e263]
+            - paragraph [ref=f5e264]: Боты, сигналы, команды, состояния и устойчивые уведомления.
+          - generic [ref=f5e265]:
+            - heading "Backend & Deploy" [level=3] [ref=f5e266]
+            - paragraph [ref=f5e267]: Laravel, WordPress, REST, Docker, Nginx и VPS/хостинг.
+      - generic [ref=f5e268]:
+        - generic [ref=f5e269]:
+          - heading "Есть задача?" [level=2] [ref=f5e270]
+          - link "Обсудить в Telegram" [ref=f5e271] [cursor=pointer]:
+            - /url: https://t.me/DevSpaceWork
+        - generic [ref=f5e276]:
+          - generic [ref=f5e277]:
+            - generic [ref=f5e278]: Telegram
+            - generic [ref=f5e279]:
+              - link "@cryvento" [ref=f5e280] [cursor=pointer]:
+                - /url: https://t.me/cryvento
+              - generic [ref=f5e281]: /
+              - link "@tonaryy" [ref=f5e282] [cursor=pointer]:
+                - /url: https://t.me/tonaryy
+              - generic [ref=f5e283]: /
+              - link "@DevSpaceWork" [ref=f5e284] [cursor=pointer]:
+                - /url: https://t.me/DevSpaceWork
+          - link "Email devspaceletters@gmail.com" [ref=f5e288] [cursor=pointer]:
+            - /url: mailto:devspaceletters@gmail.com
+            - generic [ref=f5e289]: Email
+            - generic [ref=f5e290]: devspaceletters@gmail.com
+        - button "Наверх" [ref=f5e295] [cursor=pointer]
