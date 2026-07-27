@@ -45,7 +45,7 @@ video { display: block; max-width: 100%; }
 .preloader-word { position: absolute; display: flex; align-items: baseline; justify-content: center; opacity: 0; font: 900 clamp(48px, 8vw, 118px)/0.86 var(--display); letter-spacing: -0.04em; white-space: nowrap; transform: scale(0.78); transition: opacity 0.28s ease 0.28s, transform 0.68s var(--ease-out) 0.12s; }
 .preloader-word b, .preloader-word em { font: inherit; }
 .preloader-word b { color: var(--ink-inverse); }
-.preloader-word em { color: var(--dark); -webkit-text-stroke: clamp(1px, 0.12vw, 2px) var(--ink-inverse); }
+.preloader-word em { color: var(--ink-inverse); }
 .preloader-mark.is-complete { width: min(76vw, 760px); border-color: transparent; border-radius: 0; }
 .preloader-mark.is-complete::before, .preloader-mark.is-complete::after { opacity: 0; transform: scale(1.35); }
 .preloader-mark.is-complete .preloader-letter { opacity: 0; transform: scale(0.55); }
