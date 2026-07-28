@@ -21,6 +21,7 @@ test('uses five local typography roles and clean hero text', async () => {
 
   assert.match(css, /--font-hero:\s*"Arial Black",\s*"Inter"/)
   assert.match(css, /\.hero-title__line--outline > span\s*\{[^}]*color:\s*transparent;[^}]*-webkit-text-stroke:/s)
+  assert.match(css, /\.marquee-track span\s*\{[^}]*var\(--font-hero\)[^}]*color:\s*transparent;[^}]*-webkit-text-stroke:/s)
   assert.doesNotMatch(css, /\.hero-title__line--outline > span\s*\{[^}]*font-weight:\s*300/s)
   assert.doesNotMatch(app, /hero-letter-(?:de|a)/)
   assert.match(app, /<span>ОТ ИДЕИ –<\/span>/)
