@@ -24,5 +24,5 @@ test('uses five local typography roles and clean hero text', async () => {
   assert.match(app, /<span>ОТ ИДЕИ –<\/span>/)
   assert.match(app, /<span>ДО ПРОДАКШЕНА<\/span>/)
   assert.match(app, /GSAP/)
-  assert.match(main, /from 'gsap'/)
+  assert.match(app, /from 'gsap'/)
 })

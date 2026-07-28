@@ -157,8 +157,8 @@ onBeforeUnmount(() => {
     <main>
       <section id="top" class="hero-section">
         <h1 class="hero-title" aria-label="От идеи – до продакшена">
-          <span class="hero-title__line"><span>ОТ И<i class="hero-letter-de">Д</i>ЕИ –</span></span>
-          <span class="hero-title__line hero-title__line--outline"><span><i class="hero-letter-de">Д</i>О ПРО<i class="hero-letter-de">Д</i><i class="hero-letter-a">А</i>КШЕНА</span></span>
+          <span class="hero-title__line"><span>ОТ ИДЕИ –</span></span>
+          <span class="hero-title__line hero-title__line--outline"><span>ДО ПРОДАКШЕНА</span></span>
         </h1>
         <div class="hero-footer"><button class="directional-action directional-action--dark directional-action--down" type="button" @click="scrollTo('projects')"><span>Смотреть работы</span><i aria-hidden="true"><ArrowIcon direction="down" /></i></button></div>
       </section>
