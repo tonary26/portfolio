@@ -14,7 +14,7 @@
   --pad: clamp(20px, 4vw, 72px);
   --radius: clamp(20px, 3vw, 46px);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --font-hero: "Arial Black", "Inter", sans-serif;
+  --font-hero: "Arimo", Arial, sans-serif;
   --font-section: "Onest", Arial, sans-serif;
   --font-card: "Manrope", Arial, sans-serif;
   --font-body: "Golos Text", Arial, sans-serif;

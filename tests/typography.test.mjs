@@ -11,15 +11,16 @@ test('uses five local typography roles and clean hero text', async () => {
     read('src/App.vue'),
   ])
 
-  for (const family of ['inter', 'onest', 'manrope', 'golos-text', 'jetbrains-mono']) {
+  for (const family of ['arimo', 'onest', 'manrope', 'golos-text', 'jetbrains-mono']) {
     assert.match(main, new RegExp(`@fontsource/${family}`))
   }
+  assert.doesNotMatch(main, /@fontsource\/inter/)
 
   for (const token of ['--font-hero', '--font-section', '--font-card', '--font-body', '--font-meta']) {
     assert.match(css, new RegExp(token))
   }
 
-  assert.match(css, /--font-hero:\s*"Arial Black",\s*"Inter"/)
+  assert.match(css, /--font-hero:\s*"Arimo"/)
   assert.match(css, /\.hero-title__line--outline > span\s*\{[^}]*color:\s*transparent;[^}]*-webkit-text-stroke:/s)
   assert.match(css, /\.marquee-track span\s*\{[^}]*var\(--font-hero\)[^}]*color:\s*transparent;[^}]*-webkit-text-stroke:/s)
   assert.doesNotMatch(css, /\.hero-title__line--outline > span\s*\{[^}]*font-weight:\s*300/s)
