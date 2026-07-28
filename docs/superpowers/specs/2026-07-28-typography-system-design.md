@@ -11,7 +11,7 @@ GSAP and the existing motion system remain unchanged.
 The interface uses five locally bundled Cyrillic-capable font families. Each
 family has one clear responsibility:
 
-1. **Unbounded** — hero title, DevSpace wordmark, loader wordmark, and the
+1. **Inter** — hero title, DevSpace wordmark, loader wordmark, and the
    highest-priority display text.
 2. **Onest** — major section headings and drawer hero headings.
 3. **Manrope** — project names, capability names, and medium display headings.
@@ -28,8 +28,8 @@ There must be no Google Fonts or other runtime font request.
 Typography communicates importance through family, size, weight, spacing, and
 color together:
 
-- Hero: Unbounded 800/900, fluid display scale, tight but safe tracking.
-- Secondary hero line: Unbounded 300, visually light and linear.
+- Hero: Inter 900, fluid display scale, tight but safe tracking.
+- Secondary hero line: Inter 900 with a responsive outline stroke.
 - Section heading: Onest 800/900, one clear step below the hero.
 - Card and capability heading: Manrope 700/800.
 - Body and interactive copy: Golos Text 400/600/700.
@@ -40,20 +40,11 @@ must use the token for its semantic level.
 
 ## Outlined-text correction
 
-The current combination of `font-weight: 900`, transparent fill, and
-`-webkit-text-stroke` creates inner contours that make letters such as
-`А`, `Р`, and `Д` appear split into separate pieces.
-
-All outlined headline treatments will be replaced by a real light font:
-
-- use Unbounded 300;
-- render the glyphs with a solid foreground color;
-- remove `-webkit-text-stroke` and transparent text fill;
-- render each line as one uninterrupted text run;
-- remove manual per-letter `i` wrappers and spacing corrections.
-
-This keeps the secondary line visually lighter than the solid hero line while
-preserving intact Cyrillic glyph construction at every scale.
+The original outlined hero was visually correct, but its Cyrillic letters were
+split into separate `i` elements. The outlined headline keeps Inter 900,
+transparent fill, and the responsive `-webkit-text-stroke`, while every line is
+rendered as one uninterrupted text run. Manual per-letter wrappers and spacing
+corrections remain removed.
 
 ## Implementation boundaries
 
@@ -79,7 +70,7 @@ preserving intact Cyrillic glyph construction at every scale.
 
 Implementation is accepted when:
 
-1. No `-webkit-text-stroke` remains on text.
+1. The hero outline uses Inter 900 with its responsive text stroke.
 2. No `hero-letter-de` or `hero-letter-a` wrappers remain.
 3. Browser font faces confirm all five required families are loaded where used.
 4. The hero has no horizontal overflow at 320, 390, 768, and 1440 px.

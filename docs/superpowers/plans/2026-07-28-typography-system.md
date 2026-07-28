@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Install and apply the approved five-role typography system while replacing fragmented outlined Cyrillic text with a real light font and preserving GSAP behavior.
+**Goal:** Install and apply the approved five-role typography system while preserving the bold outlined Inter hero, removing fragmented per-letter markup, and keeping GSAP behavior.
 
 **Architecture:** Fontsource packages provide locally bundled Cyrillic faces. `src/main.js` owns font loading, `src/styles.css` maps semantic font tokens to component roles, and `src/App.vue` keeps hero lines as uninterrupted text runs so GSAP can animate line wrappers without per-letter artifacts.
 
@@ -42,7 +42,7 @@ test('uses five local typography roles and clean hero text', async () => {
     read('src/App.vue'),
   ])
 
-  for (const family of ['unbounded', 'onest', 'manrope', 'golos-text', 'jetbrains-mono']) {
+  for (const family of ['inter', 'onest', 'manrope', 'golos-text', 'jetbrains-mono']) {
     assert.match(main, new RegExp(`@fontsource/${family}`))
   }
 
@@ -50,7 +50,8 @@ test('uses five local typography roles and clean hero text', async () => {
     assert.match(css, new RegExp(token))
   }
 
-  assert.doesNotMatch(css, /-webkit-text-stroke/)
+  assert.match(css, /--font-hero:\s*"Inter"/)
+  assert.match(css, /-webkit-text-stroke/)
   assert.doesNotMatch(app, /hero-letter-(?:de|a)/)
   assert.match(app, /<span>ОТ ИДЕИ –<\/span>/)
   assert.match(app, /<span>ДО ПРОДАКШЕНА<\/span>/)
@@ -64,7 +65,7 @@ test('uses five local typography roles and clean hero text', async () => {
 Run: `node --test tests/typography.test.mjs`
 
 Expected: FAIL because the five Fontsource families and semantic tokens do not
-exist and the old text-stroke/per-letter wrappers remain.
+exist and the old per-letter wrappers remain.
 
 - [ ] **Step 3: Add the reusable test command**
 
@@ -99,10 +100,8 @@ Expected: packages are added to dependencies with no audit vulnerabilities.
 Use these imports in `src/main.js`:
 
 ```js
-import '@fontsource/unbounded/cyrillic-300.css'
-import '@fontsource/unbounded/cyrillic-900.css'
-import '@fontsource/unbounded/latin-300.css'
-import '@fontsource/unbounded/latin-900.css'
+import '@fontsource/inter/cyrillic-900.css'
+import '@fontsource/inter/latin-900.css'
 import '@fontsource/onest/cyrillic-800.css'
 import '@fontsource/onest/latin-800.css'
 import '@fontsource/manrope/cyrillic-700.css'
@@ -146,7 +145,7 @@ git commit -m "feat: bundle DevSpace font families"
 Replace the generic font variables with:
 
 ```css
---font-hero: "Unbounded", "Arial Black", sans-serif;
+--font-hero: "Inter", "Arial Black", sans-serif;
 --font-section: "Onest", Arial, sans-serif;
 --font-card: "Manrope", Arial, sans-serif;
 --font-body: "Golos Text", Arial, sans-serif;
@@ -161,20 +160,19 @@ Map them by role:
 - body, navigation, filters, buttons and links → `--font-body`;
 - metadata, stacks, counters and terminal decorations → `--font-meta`.
 
-- [ ] **Step 2: Replace outlined text with a real light face**
+- [ ] **Step 2: Restore the bold outline without fragmented markup**
 
 Use:
 
 ```css
 .hero-title__line--outline > span {
-  color: var(--ink-inverse);
-  font-weight: 300;
-  letter-spacing: -0.015em;
+  color: transparent;
+  -webkit-text-stroke: clamp(1px, 0.13vw, 2px) var(--ink-inverse);
 }
 ```
 
-Remove every `-webkit-text-stroke`, transparent text fill, `.hero-letter-de`,
-and `.hero-letter-a` rule.
+Keep the responsive outline, but remove every `.hero-letter-de` and
+`.hero-letter-a` rule.
 
 - [ ] **Step 3: Restore uninterrupted hero strings**
 
@@ -222,8 +220,8 @@ Expected: both commands exit 0; built assets include all five font families.
 Using local Chrome through Playwright, check widths `320`, `390`, `768`, and
 `1440`:
 
-- computed hero font is Unbounded;
-- secondary hero line weight is 300;
+- computed hero font is Inter;
+- secondary hero line is Inter 900 with the responsive stroke;
 - section heading is Onest;
 - project heading is Manrope;
 - body is Golos Text;
@@ -244,7 +242,7 @@ without clipped headings or unstable line breaks.
 Run:
 
 ```powershell
-rg -n "text-stroke|hero-letter-de|hero-letter-a|fonts\\.googleapis|fonts\\.gstatic" src index.html
+rg -n "hero-letter-de|hero-letter-a|fonts\\.googleapis|fonts\\.gstatic" src index.html
 git diff --check
 git status --short
 ```
