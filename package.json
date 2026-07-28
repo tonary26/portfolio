@@ -11,7 +11,12 @@
     "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
+    "@fontsource/golos-text": "^5.3.0",
     "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/manrope": "^5.3.0",
+    "@fontsource/onest": "^5.3.0",
+    "@fontsource/unbounded": "^5.3.0",
     "gsap": "^3.13.0",
     "vue": "^3.5.18"
   },
