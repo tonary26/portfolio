@@ -3,7 +3,10 @@ import { onBeforeUnmount, onMounted } from 'vue'
 import ArrowIcon from './ArrowIcon.vue'
 import ProjectVisual from './ProjectVisual.vue'
 
-const props = defineProps({ project: { type: Object, required: true } })
+defineProps({
+  project: { type: Object, required: true },
+  labels: { type: Object, required: true },
+})
 const emit = defineEmits(['close'])
 
 const onKey = (event) => event.key === 'Escape' && emit('close')
@@ -14,17 +17,17 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKey); document.b
 <template>
   <div class="drawer-backdrop" role="presentation" @click.self="$emit('close')">
     <article class="project-drawer" role="dialog" aria-modal="true" :aria-labelledby="`drawer-${project.id}`">
-      <button class="drawer-close" type="button" @click="$emit('close')" aria-label="Закрыть">Закрыть <span>×</span></button>
+      <button class="drawer-close" type="button" @click="$emit('close')" :aria-label="labels.close">{{ labels.close }} <span>×</span></button>
       <div class="drawer-hero">
         <div><p>{{ project.type }}</p><h2 :id="`drawer-${project.id}`">{{ project.title }}</h2><span>{{ project.subtitle }}</span></div>
         <ProjectVisual :project="project" />
       </div>
       <div class="drawer-body">
-        <div class="drawer-story"><h3>О проекте</h3><p>{{ project.long }}</p></div>
-        <div class="drawer-features"><h3>Что реализовано</h3><ul><li v-for="feature in project.features" :key="feature">{{ feature }}</li></ul></div>
+        <div class="drawer-story"><h3>{{ labels.about }}</h3><p>{{ project.long }}</p></div>
+        <div class="drawer-features"><h3>{{ labels.features }}</h3><ul><li v-for="feature in project.features" :key="feature">{{ feature }}</li></ul></div>
       </div>
       <div class="drawer-stack"><span v-for="item in project.stack" :key="item">{{ item }}</span></div>
-      <a v-if="project.link" class="drawer-site-link directional-action directional-action--light" :href="project.link" target="_blank" rel="noreferrer"><span>Открыть готовый сайт</span><i aria-hidden="true"><ArrowIcon /></i></a>
+      <a v-if="project.link" class="drawer-site-link directional-action directional-action--light" :href="project.link" target="_blank" rel="noreferrer"><span>{{ labels.openReady }}</span><i aria-hidden="true"><ArrowIcon /></i></a>
     </article>
   </div>
 </template>

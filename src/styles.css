@@ -74,6 +74,11 @@ video { display: block; max-width: 100%; }
 .site-header nav .nav-contact::before { content: ""; position: absolute; z-index: -1; inset: -1px; background: var(--dark); clip-path: circle(0 at 50% 50%); transition: clip-path 0.48s var(--ease-out); }
 .site-header nav .nav-contact:hover, .site-header nav .nav-contact:focus-visible { color: var(--ink-inverse); }
 .site-header nav .nav-contact:hover::before, .site-header nav .nav-contact:focus-visible::before { clip-path: circle(75% at 50% 50%); }
+.header-actions { display: flex; align-items: center; gap: 14px; }
+.language-switch { display: inline-flex; align-items: center; gap: 2px; min-height: 42px; border: 1px solid var(--line-dark); padding: 3px; background: oklch(0.13 0 0); color: var(--muted-inverse); }
+.language-switch button { min-width: 38px; min-height: 34px; padding: 0 9px; color: inherit; font: 700 11px/1 var(--font-meta); letter-spacing: 0.04em; transition: background 0.25s ease, color 0.25s ease; }
+.language-switch button:hover, .language-switch button:focus-visible { color: var(--ink-inverse); }
+.language-switch button.active { background: var(--ink-inverse); color: var(--dark); }
 .menu-toggle { display: none; width: 44px; height: 44px; }
 .menu-toggle span { display: block; width: 24px; height: 1px; margin: 6px auto; background: currentColor; }
 
@@ -251,6 +256,7 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
   .site-header nav { position: fixed; inset: 0; z-index: -1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 30px; background: var(--dark); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
   .site-header nav.open { opacity: 1; pointer-events: auto; }
   .site-header nav button { font: 700 32px/1 var(--font-body); color: var(--ink-inverse); }
+  .header-actions { position: relative; z-index: 2; }
   .menu-toggle { display: block; position: relative; z-index: 2; }
   .hero-section { min-height: 100svh; padding-bottom: 130px; }
   .hero-footer { align-items: flex-start; }
@@ -270,6 +276,11 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
   .hero-section { padding-top: 110px; padding-bottom: 112px; }
   .hero-title { font-size: clamp(28px, 8.5vw, 40px); line-height: 1.04; }
   .hero-title__line > span { white-space: nowrap; }
+  .site-header { align-items: flex-start; padding-top: 18px; }
+  .brand { padding-top: 12px; }
+  .header-actions { gap: 8px; }
+  .language-switch { min-height: 38px; padding: 2px; }
+  .language-switch button { min-width: 32px; min-height: 32px; padding: 0 7px; font-size: 10px; }
   .section-pad { padding-top: 76px; padding-bottom: 76px; }
   .filter-tabs { width: 100%; flex-wrap: nowrap; overflow-x: auto; border-radius: 12px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .filter-tabs::-webkit-scrollbar { display: none; }

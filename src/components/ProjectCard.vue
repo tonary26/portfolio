@@ -5,6 +5,7 @@ import ProjectVisual from './ProjectVisual.vue'
 defineProps({
   project: { type: Object, required: true },
   position: { type: String, default: 'middle' },
+  labels: { type: Object, required: true },
 })
 defineEmits(['open'])
 </script>
@@ -18,11 +19,11 @@ defineEmits(['open'])
         <p class="project-card__subtitle">{{ project.subtitle }}</p>
         <div class="project-card__stack"><span v-for="item in project.stack.slice(0, 4)" :key="item">{{ item }}</span></div>
         <div class="project-card__actions">
-          <button class="project-card__more" type="button" @click="$emit('open', project)" :aria-label="`Подробнее о проекте ${project.title}`">
-            <span>Подробнее о проекте</span>
+          <button class="project-card__more" type="button" @click="$emit('open', project)" :aria-label="labels.moreAria(project.title)">
+            <span>{{ labels.more }}</span>
           </button>
           <a v-if="project.link" class="project-card__external directional-action directional-action--light" :href="project.link" target="_blank" rel="noreferrer">
-            Открыть сайт <i aria-hidden="true"><ArrowIcon /></i>
+            {{ labels.open }} <i aria-hidden="true"><ArrowIcon /></i>
           </a>
         </div>
       </div>
