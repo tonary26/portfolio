@@ -243,12 +243,14 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
 .motion-ready .project-card.reveal .project-visual {
   opacity: 0;
   transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
+  transition: opacity 0.68s cubic-bezier(0.22, 0.1, 0.25, 1), transform 0.78s cubic-bezier(0.22, 0.1, 0.25, 1);
 }
-.motion-ready .project-card.reveal.is-visible .project-card__copy { animation: project-part-in 0.78s cubic-bezier(0.22, 0.1, 0.25, 1) both; }
-.motion-ready .project-card.reveal.is-visible .project-visual { animation: project-part-in 0.82s cubic-bezier(0.22, 0.1, 0.25, 1) both; }
-@keyframes project-part-in {
-  from { opacity: 0; transform: translate3d(var(--reveal-x), var(--reveal-y), 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+.motion-ready .project-card.reveal.is-visible .project-card__copy,
+.motion-ready .project-card.reveal.is-visible .project-visual,
+.motion-ready .project-card.reveal.is-copy-visible .project-card__copy,
+.motion-ready .project-card.reveal.is-visual-visible .project-visual {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 @media (max-width: 900px) {
@@ -298,11 +300,9 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
     --reveal-x: 0px;
     --reveal-y: 22px;
   }
-  .motion-ready .project-card.reveal.is-copy-visible .project-card__copy {
-    animation: project-part-in 0.6s cubic-bezier(0.22, 0.1, 0.25, 1) both;
-  }
-  .motion-ready .project-card.reveal.is-visual-visible .project-visual {
-    animation: project-part-in 0.55s cubic-bezier(0.22, 0.1, 0.25, 1) both;
+  .motion-ready .project-card.reveal .project-card__copy,
+  .motion-ready .project-card.reveal .project-visual {
+    transition-duration: 0.55s, 0.6s;
   }
   .project-media { width: min(84%, 330px); height: min(72%, 250px); }
   .tenant-ui, .terminal-ui { inset: 36px 24px; }
