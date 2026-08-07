@@ -5,10 +5,11 @@ import { readFile } from 'node:fs/promises'
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8')
 
 test('uses five local typography roles and clean hero text', async () => {
-  const [main, css, app] = await Promise.all([
+  const [main, css, app, i18n] = await Promise.all([
     read('src/main.js'),
     read('src/styles.css'),
     read('src/App.vue'),
+    read('src/data/i18n.json'),
   ])
 
   for (const family of ['arimo', 'onest', 'manrope', 'golos-text', 'jetbrains-mono']) {
@@ -25,8 +26,8 @@ test('uses five local typography roles and clean hero text', async () => {
   assert.match(css, /\.marquee-track span\s*\{[^}]*var\(--font-hero\)[^}]*color:\s*transparent;[^}]*-webkit-text-stroke:/s)
   assert.doesNotMatch(css, /\.hero-title__line--outline > span\s*\{[^}]*font-weight:\s*300/s)
   assert.doesNotMatch(app, /hero-letter-(?:de|a)/)
-  assert.match(app, /first:\s*'ОТ ИДЕИ –'/)
-  assert.match(app, /second:\s*'ДО ПРОДАКШЕНА'/)
+  assert.match(i18n, /"first":\s*"ОТ ИДЕИ –"/)
+  assert.match(i18n, /"second":\s*"ДО ПРОДАКШЕНА"/)
   assert.match(app, /<span>\{\{ t\.hero\.first \}\}<\/span>/)
   assert.match(app, /<span>\{\{ t\.hero\.second \}\}<\/span>/)
   assert.match(app, /GSAP/)

@@ -19,7 +19,7 @@ defineEmits(['open'])
         <p class="project-card__subtitle">{{ project.subtitle }}</p>
         <div class="project-card__stack"><span v-for="item in project.stack.slice(0, 4)" :key="item">{{ item }}</span></div>
         <div class="project-card__actions">
-          <button class="project-card__more" type="button" @click="$emit('open', project)" :aria-label="labels.moreAria(project.title)">
+          <button class="project-card__more" type="button" @click="$emit('open', project)" :aria-label="labels.moreAria.replace('{title}', project.title)">
             <span>{{ labels.more }}</span>
           </button>
           <a v-if="project.link" class="project-card__external directional-action directional-action--light" :href="project.link" target="_blank" rel="noreferrer">
