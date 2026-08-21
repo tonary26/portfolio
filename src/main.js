@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { inject } from '@vercel/analytics'
 import '@fontsource/arimo/cyrillic-700.css'
 import '@fontsource/arimo/latin-700.css'
 import '@fontsource/onest/cyrillic-800.css'
@@ -24,4 +25,5 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 document.documentElement.classList.toggle('motion-ready', !prefersReducedMotion)
 document.documentElement.classList.toggle('no-motion', prefersReducedMotion)
 
+inject()
 createApp(App).mount('#app')
