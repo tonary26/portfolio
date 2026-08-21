@@ -1,6 +1,7 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import gsap from 'gsap'
+import { inject } from '@vercel/analytics'
 import ArrowIcon from './components/ArrowIcon.vue'
 import ProjectCard from './components/ProjectCard.vue'
 import ProjectDrawer from './components/ProjectDrawer.vue'
@@ -125,6 +126,7 @@ const setLanguage = (language) => {
 const onBreakpointChange = () => setupReveals()
 
 onMounted(() => {
+  inject({ mode: 'auto' })
   document.documentElement.lang = currentLanguage.value
   mobileQuery.addEventListener('change', onBreakpointChange)
   const startedAt = performance.now()
