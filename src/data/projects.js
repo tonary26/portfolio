@@ -1,10 +1,43 @@
 export const filters = [
   { id: 'all', label: 'Все проекты' },
+  { id: 'apps', label: 'Игры / приложения' },
   { id: 'web', label: 'Web-системы' },
   { id: 'bots', label: 'Telegram-боты' },
 ]
 
 export const projects = [
+  {
+    id: 'motiondeck',
+    category: 'apps',
+    type: 'Flutter / Спорт',
+    title: 'MotionDeck',
+    subtitle: 'Спортивные инструменты в одном быстром рабочем пространстве',
+    description: 'Интервальный таймер, счётчик повторов и подходов, табло и трекер темпа для тренировок и игр.',
+    long: 'MotionDeck объединяет основные спортивные инструменты в одном сфокусированном интерфейсе. Приложение подходит для самостоятельных тренировок, игр и работы тренера с группой.',
+    stack: ['Flutter', 'Dart', 'Android', 'Google Play'],
+    features: ['Интервальный таймер', 'Счётчик повторов и подходов', 'Компактное игровое табло', 'Трекер темпа тренировки'],
+    visual: 'motiondeck',
+    media: new URL('../../gif/motiondeck.mp4', import.meta.url).href,
+    link: 'https://play.google.com/store/apps/details?id=com.motiondeck.sportutility',
+    externalLabel: 'Открыть в Google Play',
+    accent: 'blue',
+  },
+  {
+    id: 'eaglebreath',
+    category: 'apps',
+    type: 'Flutter / Wellness',
+    title: 'EagleBreath',
+    subtitle: 'Визуальный проводник для спокойных дыхательных практик',
+    description: 'Дыхательный круг плавно растёт на вдохе, останавливается в паузе и сжимается на выдохе.',
+    long: 'EagleBreath помогает найти комфортный ритм и пройти всю сессию, не отвлекаясь на таймер. Размер круга, подписи фаз и обратный отсчёт синхронно ведут пользователя через вдох, паузу и выдох.',
+    stack: ['Flutter', 'Dart', 'Android', 'Google Play'],
+    features: ['Анимированный дыхательный круг', 'Фазы вдоха, паузы и выдоха', 'Понятные подписи и обратный отсчёт', 'Спокойный сценарий без лишних действий'],
+    visual: 'eaglebreath',
+    media: new URL('../../gif/eaglebreath.mp4', import.meta.url).href,
+    link: 'https://play.google.com/store/apps/details?id=com.eaglebreath.calmcoach&hl=en',
+    externalLabel: 'Открыть в Google Play',
+    accent: 'cyan',
+  },
   {
     id: 'hotel-rai',
     category: 'web',
