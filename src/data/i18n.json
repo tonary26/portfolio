@@ -9,7 +9,7 @@
       "loader": ["Подготавливаем среду", "Собираем проекты", "Настраиваем интерфейс", "Почти готово"],
       "nav": { "projects": "Проекты", "services": "Компетенции", "contact": "Контакты", "menu": "Меню" },
       "hero": { "aria": "От идеи – до продакшена", "first": "ОТ ИДЕИ –", "second": "ДО ПРОДАКШЕНА", "cta": "Смотреть работы" },
-      "filters": { "all": "Все проекты", "web": "Web-системы", "bots": "Telegram-боты" },
+      "filters": { "all": "Все проекты", "apps": "Игры / приложения", "web": "Web-системы", "bots": "Telegram-боты" },
       "sections": { "projects": "Проекты" },
       "services": [
         { "title": "Web & UI", "text": "Vue, API-интеграции, адаптивность и production-сборка." },
@@ -31,7 +31,7 @@
       "loader": ["Preparing the workspace", "Loading projects", "Tuning the interface", "Almost ready"],
       "nav": { "projects": "Projects", "services": "Expertise", "contact": "Contact", "menu": "Menu" },
       "hero": { "aria": "From idea to production", "first": "FROM IDEA -", "second": "TO PRODUCTION", "cta": "View work" },
-      "filters": { "all": "All projects", "web": "Web systems", "bots": "Telegram bots" },
+      "filters": { "all": "All projects", "apps": "Games & apps", "web": "Web systems", "bots": "Telegram bots" },
       "sections": { "projects": "Projects" },
       "services": [
         { "title": "Web & UI", "text": "Vue, API integrations, responsive interfaces, and production builds." },
@@ -53,7 +53,7 @@
       "loader": ["Pregatim spatiul", "Incarcam proiectele", "Ajustam interfata", "Aproape gata"],
       "nav": { "projects": "Proiecte", "services": "Competente", "contact": "Contact", "menu": "Meniu" },
       "hero": { "aria": "De la idee la productie", "first": "DE LA IDEE -", "second": "LA PRODUCTIE", "cta": "Vezi lucrarile" },
-      "filters": { "all": "Toate proiectele", "web": "Sisteme web", "bots": "Boti Telegram" },
+      "filters": { "all": "Toate proiectele", "apps": "Jocuri si aplicatii", "web": "Sisteme web", "bots": "Boti Telegram" },
       "sections": { "projects": "Proiecte" },
       "services": [
         { "title": "Web & UI", "text": "Vue, integrari API, interfete responsive si build-uri de productie." },

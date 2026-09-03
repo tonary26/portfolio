@@ -5,17 +5,21 @@ import { access, readFile } from 'node:fs/promises'
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8')
 
 test('includes MotionDeck and EagleBreath as playable mobile app cases', async () => {
-  const [{ filters, projects }, card, drawer, app] = await Promise.all([
+  const [{ filters, projects }, card, drawer, app, i18n] = await Promise.all([
     import('../src/data/projects.js'),
     read('src/components/ProjectCard.vue'),
     read('src/components/ProjectDrawer.vue'),
     read('src/App.vue'),
+    read('src/data/i18n.json').then(JSON.parse),
   ])
 
   assert.deepEqual(filters.find((filter) => filter.id === 'apps'), {
     id: 'apps',
     label: 'Игры / приложения',
   })
+  assert.equal(i18n.messages.ru.filters.apps, 'Игры / приложения')
+  assert.equal(i18n.messages.en.filters.apps, 'Games & apps')
+  assert.equal(i18n.messages.ro.filters.apps, 'Jocuri si aplicatii')
 
   const motionDeck = projects.find((project) => project.id === 'motiondeck')
   const eagleBreath = projects.find((project) => project.id === 'eaglebreath')
