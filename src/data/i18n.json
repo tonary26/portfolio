@@ -6,7 +6,6 @@
   ],
   "messages": {
     "ru": {
-      "loader": ["Подготавливаем среду", "Собираем проекты", "Настраиваем интерфейс", "Почти готово"],
       "nav": { "projects": "Проекты", "services": "Компетенции", "contact": "Контакты", "menu": "Меню" },
       "hero": { "aria": "От идеи – до продакшена", "first": "ОТ ИДЕИ –", "second": "ДО ПРОДАКШЕНА", "cta": "Смотреть работы" },
       "filters": { "all": "Все проекты", "apps": "Игры / приложения", "web": "Web-системы", "bots": "Telegram-боты" },
@@ -28,7 +27,6 @@
       }
     },
     "en": {
-      "loader": ["Preparing the workspace", "Loading projects", "Tuning the interface", "Almost ready"],
       "nav": { "projects": "Projects", "services": "Expertise", "contact": "Contact", "menu": "Menu" },
       "hero": { "aria": "From idea to production", "first": "FROM IDEA -", "second": "TO PRODUCTION", "cta": "View work" },
       "filters": { "all": "All projects", "apps": "Games & apps", "web": "Web systems", "bots": "Telegram bots" },
@@ -50,7 +48,6 @@
       }
     },
     "ro": {
-      "loader": ["Pregatim spatiul", "Incarcam proiectele", "Ajustam interfata", "Aproape gata"],
       "nav": { "projects": "Proiecte", "services": "Competente", "contact": "Contact", "menu": "Meniu" },
       "hero": { "aria": "De la idee la productie", "first": "DE LA IDEE -", "second": "LA PRODUCTIE", "cta": "Vezi lucrarile" },
       "filters": { "all": "Toate proiectele", "apps": "Jocuri si aplicatii", "web": "Sisteme web", "bots": "Boti Telegram" },
@@ -74,6 +71,13 @@
   },
   "projectTranslations": {
     "en": {
+      "coraviero": {
+        "type": "WordPress / E-commerce",
+        "subtitle": "Online store with a catalog of 846 products",
+        "description": "WooCommerce store development, catalog audit, and recovery of advertising images.",
+        "long": "We developed and configured the coraviero.com online store on WordPress and WooCommerce: its structure, catalog, informational pages, brand assets, contacts, and legal company details. All 846 products were reviewed, 52 advertising images were restored across eight products, media belonging to other models was removed, and cards still requiring promotional materials were identified.",
+        "features": ["Catalog of 846 products and improved product pages", "Logo, favicon, company page, and responsive interface", "NIF, NIF-IVA, and Registro Mercantil de Sevilla details", "52 advertising images restored across eight products", "Legacy URL redirects and catalog technical fixes", "WP Rocket and SiteGround server cache cleanup", "Pre-change backups and QA with no broken images", "Initial testing of AI-assisted product image enhancement"]
+      },
       "hotel-rai": {
         "type": "Website",
         "subtitle": "Premium hotel website in Tetyushi",
@@ -160,6 +164,13 @@
       }
     },
     "ro": {
+      "coraviero": {
+        "type": "WordPress / E-commerce",
+        "subtitle": "Magazin online cu un catalog de 846 de produse",
+        "description": "Dezvoltare magazin WooCommerce, audit de catalog si recuperarea imaginilor publicitare.",
+        "long": "Am dezvoltat si configurat magazinul online coraviero.com pe WordPress si WooCommerce: structura, catalogul, paginile informative, materialele de brand, contactele si datele juridice ale companiei. Au fost verificate toate cele 846 de produse, au fost recuperate 52 de imagini publicitare pentru opt produse, au fost eliminate imaginile altor modele si au fost identificate fisele care mai necesita materiale promotionale.",
+        "features": ["Catalog de 846 de produse si pagini imbunatatite", "Logo, favicon, pagina companiei si interfata responsive", "Date NIF, NIF-IVA si Registro Mercantil de Sevilla", "52 de imagini publicitare recuperate pentru opt produse", "Redirectari pentru URL-uri vechi si corectii tehnice de catalog", "Curatarea cache-ului WP Rocket si SiteGround", "Backup-uri inainte de modificari si verificare fara imagini lipsa", "Primele teste de imbunatatire AI a imaginilor de produs"]
+      },
       "hotel-rai": {
         "type": "Website",
         "subtitle": "Site premium pentru un hotel din Tetyushi",

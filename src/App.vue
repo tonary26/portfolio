@@ -7,15 +7,10 @@ import ProjectDrawer from './components/ProjectDrawer.vue'
 import { filters, projects } from './data/projects'
 import i18n from './data/i18n.json'
 
-const ready = ref(false)
-const progress = ref(0)
-const loaderComplete = ref(false)
 const activeFilter = ref('all')
 const selectedProject = ref(null)
 const mobileMenu = ref(false)
 let revealObserver
-let progressFrame
-let completionTimer
 const mobileQuery = window.matchMedia('(max-width: 620px)')
 
 const { languages, messages, projectTranslations } = i18n
@@ -38,13 +33,6 @@ const localizedProjects = computed(() => projects.map((project) => ({
 const filteredProjects = computed(() => activeFilter.value === 'all'
   ? localizedProjects.value
   : localizedProjects.value.filter((project) => project.category === activeFilter.value))
-
-const loaderStage = computed(() => {
-  if (progress.value < 28) return t.value.loader[0]
-  if (progress.value < 62) return t.value.loader[1]
-  if (progress.value < 92) return t.value.loader[2]
-  return t.value.loader[3]
-})
 
 const cardPosition = (index) => {
   if (filteredProjects.value.length === 1) return 'single'
@@ -127,48 +115,19 @@ const onBreakpointChange = () => setupReveals()
 onMounted(() => {
   document.documentElement.lang = currentLanguage.value
   mobileQuery.addEventListener('change', onBreakpointChange)
-  const startedAt = performance.now()
-  const tickProgress = (now) => {
-    progress.value = Math.min(100, Math.round((now - startedAt) / 8))
-    if (progress.value < 100) {
-      progressFrame = window.requestAnimationFrame(tickProgress)
-      return
-    }
-    loaderComplete.value = true
-    completionTimer = window.setTimeout(() => {
-      ready.value = true
-      nextTick(() => {
-        animateHero()
-        setupReveals()
-      })
-    }, 1250)
-  }
-  progressFrame = window.requestAnimationFrame(tickProgress)
+  nextTick(() => {
+    animateHero()
+    setupReveals()
+  })
 })
 
 onBeforeUnmount(() => {
   mobileQuery.removeEventListener('change', onBreakpointChange)
   revealObserver?.disconnect()
-  window.cancelAnimationFrame(progressFrame)
-  window.clearTimeout(completionTimer)
 })
 </script>
 
 <template>
-  <Transition name="preloader">
-    <div v-if="!ready" class="preloader">
-      <div class="preloader-top"><span>DEVSPACE</span></div>
-      <div class="preloader-core" :class="{ 'is-complete': loaderComplete }">
-        <div class="preloader-mark" :class="{ 'is-complete': loaderComplete }" aria-hidden="true"><span class="preloader-letter">D</span><span class="preloader-word"><b>DEV</b><em>SPACE</em></span></div>
-        <p>{{ loaderStage }}</p>
-      </div>
-      <div class="preloader-bottom">
-        <div class="preloader-track"><i :style="{ transform: `scaleX(${progress / 100})` }"></i></div>
-        <strong>{{ progress }}<small>%</small></strong>
-      </div>
-    </div>
-  </Transition>
-
   <div class="site-shell">
     <header class="site-header">
       <button class="brand" type="button" @click="scrollTo('top')"><b>DEV</b><span>SPACE</span></button>

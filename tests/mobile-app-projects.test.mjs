@@ -39,7 +39,7 @@ test('includes MotionDeck and EagleBreath as playable mobile app cases', async (
     access(new URL('../gif/eaglebreath.mp4', import.meta.url)),
   ])
 
-  assert.match(card, /project\.externalLabel \|\| 'Открыть сайт'/)
-  assert.match(drawer, /project\.externalLabel \|\| 'Открыть готовый сайт'/)
+  assert.match(card, /project\.externalLabel \|\| labels\.open/)
+  assert.match(drawer, /project\.externalLabel \|\| labels\.openReady/)
   assert.match(app, /VUE\.JS · FLUTTER · PYTHON/)
 })
