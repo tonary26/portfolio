@@ -87,7 +87,7 @@ export const projects = [
     id: 'quoravo-moto',
     category: 'web',
     type: 'Веб-сайт',
-    title: 'Quoravo Moto',
+    title: 'coraviero.motorcycles',
     subtitle: 'Интернет-магазин экипировки и аксессуаров для мотоциклов',
     description: 'Каталог товаров, корзина, оформление заказа и адаптивный интерфейс для покупателей.',
     long: 'Коммерческий сайт на WordPress и WooCommerce: витрина категорий, карточки товаров, корзина, оплата, юридические страницы и мобильная версия.',
