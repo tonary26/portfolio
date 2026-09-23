@@ -1,0 +1,11 @@
+node_modules/
+
+# Local IDE and assistant tooling
+.idea/
+.serena/
+.playwright-cli/
+.impeccable/
+
+# Generated local output and logs
+output/
+*.log

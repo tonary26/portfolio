@@ -95,7 +95,7 @@ export const projects = [
     features: ['Каталог и товарные категории', 'Корзина и оформление заказа', 'Платёжные и юридические страницы', 'Адаптивная витрина'],
     visual: 'motorcycles',
     media: new URL('../../gif/moto.mp4', import.meta.url).href,
-    link: 'https://quoravo.motorcycles/',
+    link: 'https://coraviero.motorcycles/',
     accent: 'red',
   },
   {

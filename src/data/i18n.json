@@ -11,9 +11,14 @@
       "filters": { "all": "Все проекты", "apps": "Игры / приложения", "web": "Web-системы", "bots": "Telegram-боты" },
       "sections": { "projects": "Проекты" },
       "services": [
-        { "title": "Web & UI", "text": "Vue, API-интеграции, адаптивность и production-сборка." },
-        { "title": "Telegram", "text": "Боты, сигналы, команды, состояния и устойчивые уведомления." },
-        { "title": "Backend & Deploy", "text": "Laravel, WordPress, REST, Docker, Nginx и VPS/хостинг." }
+        { "title": "Web & E-commerce", "text": "Сайты, лендинги, интернет-магазины, личные кабинеты и сложные веб-платформы под ключ." },
+        { "title": "Telegram & Mini Apps", "text": "Боты, Mini Apps и WebApp: от сценариев и интерфейса до платежей, уведомлений и запуска." },
+        { "title": "Mobile & PWA", "text": "Мобильные и кроссплатформенные приложения на Flutter, Kotlin и Swift, а также быстрые PWA." },
+        { "title": "Backend, API & Integrations", "text": "Backend и frontend, REST, GraphQL, WebSocket, платежные системы и интеграции с внешними сервисами." },
+        { "title": "CRM & Automation", "text": "CRM, ERP, админ-панели, парсеры, скрипты и автоматизация бизнес-процессов." },
+        { "title": "AI / ML & RAG", "text": "AI-сервисы, обучение и внедрение ML-моделей, LLM-интеграции, RAG и векторные базы данных." },
+        { "title": "Architecture & Data", "text": "Проектирование бизнес-логики, микросервисов, баз данных, ролей доступа и технической документации." },
+        { "title": "Deploy & Support", "text": "Docker, CI/CD, AWS, настройка сервера и окружения, выгрузка на ваш хостинг и поддержка после запуска." }
       ],
       "contact": { "title": "Есть задача?", "telegram": "Обсудить в Telegram", "top": "Наверх" },
       "projectLabels": {
@@ -32,9 +37,14 @@
       "filters": { "all": "All projects", "apps": "Games & apps", "web": "Web systems", "bots": "Telegram bots" },
       "sections": { "projects": "Projects" },
       "services": [
-        { "title": "Web & UI", "text": "Vue, API integrations, responsive interfaces, and production builds." },
-        { "title": "Telegram", "text": "Bots, signals, commands, states, and reliable notifications." },
-        { "title": "Backend & Deploy", "text": "Laravel, WordPress, REST, Docker, Nginx, and VPS/hosting setup." }
+        { "title": "Web & E-commerce", "text": "Turnkey websites, landing pages, online stores, client portals, and complex web platforms." },
+        { "title": "Telegram & Mini Apps", "text": "Bots, Mini Apps, and WebApps—from flows and interfaces to payments, notifications, and launch." },
+        { "title": "Mobile & PWA", "text": "Mobile and cross-platform apps with Flutter, Kotlin, and Swift, plus fast installable PWAs." },
+        { "title": "Backend, API & Integrations", "text": "Backend and frontend, REST, GraphQL, WebSocket, payment systems, and third-party integrations." },
+        { "title": "CRM & Automation", "text": "CRM, ERP, admin panels, parsers, scripts, and end-to-end business process automation." },
+        { "title": "AI / ML & RAG", "text": "AI services, ML model training and deployment, LLM integrations, RAG, and vector databases." },
+        { "title": "Architecture & Data", "text": "Business logic, microservices, databases, access roles, system architecture, and technical documentation." },
+        { "title": "Deploy & Support", "text": "Docker, CI/CD, AWS, server and environment setup, hosting deployment, and post-launch support." }
       ],
       "contact": { "title": "Have a task?", "telegram": "Discuss in Telegram", "top": "Back to top" },
       "projectLabels": {
@@ -53,9 +63,14 @@
       "filters": { "all": "Toate proiectele", "apps": "Jocuri si aplicatii", "web": "Sisteme web", "bots": "Boti Telegram" },
       "sections": { "projects": "Proiecte" },
       "services": [
-        { "title": "Web & UI", "text": "Vue, integrari API, interfete responsive si build-uri de productie." },
-        { "title": "Telegram", "text": "Boti, semnale, comenzi, stari si notificari stabile." },
-        { "title": "Backend & Deploy", "text": "Laravel, WordPress, REST, Docker, Nginx si VPS/hosting." }
+        { "title": "Web & E-commerce", "text": "Site-uri, landing page-uri, magazine online, conturi personale si platforme web complexe la cheie." },
+        { "title": "Telegram & Mini Apps", "text": "Boti, Mini Apps si WebApp: de la scenarii si interfata pana la plati, notificari si lansare." },
+        { "title": "Mobile & PWA", "text": "Aplicatii mobile si cross-platform cu Flutter, Kotlin si Swift, precum si PWA rapide." },
+        { "title": "Backend, API & Integrations", "text": "Backend si frontend, REST, GraphQL, WebSocket, sisteme de plata si integrari cu servicii externe." },
+        { "title": "CRM & Automation", "text": "CRM, ERP, panouri de administrare, parsere, scripturi si automatizarea proceselor de business." },
+        { "title": "AI / ML & RAG", "text": "Servicii AI, antrenarea si implementarea modelelor ML, integrari LLM, RAG si baze de date vectoriale." },
+        { "title": "Architecture & Data", "text": "Proiectarea logicii de business, microserviciilor, bazelor de date, rolurilor de acces si documentatiei tehnice." },
+        { "title": "Deploy & Support", "text": "Docker, CI/CD, AWS, configurarea serverului si mediului, publicare pe hosting si suport dupa lansare." }
       ],
       "contact": { "title": "Ai un task?", "telegram": "Discutam pe Telegram", "top": "Sus" },
       "projectLabels": {

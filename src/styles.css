@@ -157,8 +157,8 @@ video { display: block; max-width: 100%; }
 .contact-title > a { flex: none; }
 .contact-links { border-top: 1px solid var(--line-dark); }
 .contact-links > a, .contact-links__row { display: grid; grid-template-columns: 0.55fr 1fr auto; align-items: center; min-height: 92px; border-bottom: 1px solid var(--line-dark); }
-.contact-links > a { transition: padding 0.35s var(--ease-out), color 0.2s ease; }
-.contact-links > a:hover { padding: 0 14px; color: var(--primary); }
+.contact-links > a { transition: color 0.2s ease; }
+.contact-links > a:hover { color: var(--primary); }
 .contact-links span { color: var(--muted-inverse); font-size: 12px; }
 .contact-links b { font-size: clamp(17px, 2vw, 26px); }
 .contact-links i { font-style: normal; }
