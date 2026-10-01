@@ -2,6 +2,10 @@
 
 Одностраничное портфолио на Vue 3.
 
+<p align="center">
+  <img src="devspace.png" alt="Логотип" width="200">
+</p>
+
 ## Локальный запуск
 
 ```bash
