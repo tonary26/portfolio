@@ -41,5 +41,5 @@ test('includes MotionDeck and EagleBreath as playable mobile app cases', async (
 
   assert.match(card, /project\.externalLabel \|\| labels\.open/)
   assert.match(drawer, /project\.externalLabel \|\| labels\.openReady/)
-  assert.match(app, /VUE\.JS · FLUTTER · PYTHON/)
+  assert.doesNotMatch(app, /class="marquee"/)
 })

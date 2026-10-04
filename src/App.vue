@@ -164,8 +164,6 @@ onBeforeUnmount(() => {
       </section>
 
       <div class="paper-sheet">
-        <div class="marquee" aria-hidden="true"><div class="marquee-track"><span v-for="repeat in 2" :key="repeat">VUE.JS · FLUTTER · PYTHON · REACT · NEXT.JS · TYPESCRIPT · LARAVEL · NODE.JS · FASTAPI · POSTGRESQL · TELEGRAM API · AI / ML · RAG · PINIA · GSAP · DOCKER · AWS · BYBIT · WORDPRESS · </span></div></div>
-
         <section id="projects" class="projects-section section-pad">
           <div class="section-heading reveal"><h2>{{ t.sections.projects }}</h2><div class="filter-tabs" role="tablist" aria-label="Project filter"><button v-for="filter in localizedFilters" :key="filter.id" type="button" role="tab" :aria-selected="activeFilter === filter.id" :class="{ active: activeFilter === filter.id }" @click="setFilter(filter.id)">{{ filter.label }}</button></div></div>
           <Transition name="filter-swap" mode="out-in" @after-enter="setupReveals">
