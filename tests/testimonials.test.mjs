@@ -23,4 +23,7 @@ test('renders six localized testimonials in an accessible horizontal rail', asyn
   assert.match(component, /scroll-snap|testimonials__rail/)
   assert.match(component, /:disabled="!canScrollPrev"/)
   assert.match(component, /https:\/\/t\.me\//)
+  assert.match(component, /@touchstart\.passive="handleTouchStart"/)
+  assert.match(component, /@touchend\.passive="handleTouchEnd"/)
+  assert.match(component, /settleOnNearestReview/)
 })
