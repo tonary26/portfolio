@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-tau-seven-199mu3aht5.vercel.app/sitemap.xml
+Sitemap: https://devspace-work.vercel.app/sitemap.xml

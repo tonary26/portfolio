@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8')
-const domain = 'https://portfolio-tau-seven-199mu3aht5.vercel.app/'
+const domain = 'https://devspace-work.vercel.app/'
 
 test('publishes crawlable metadata for the production domain', async () => {
   const [html, robots, sitemap] = await Promise.all([
@@ -17,6 +17,6 @@ test('publishes crawlable metadata for the production domain', async () => {
   assert.match(html, new RegExp(`<meta property="og:url" content="${domain}"`))
   assert.match(html, /"@type": "Organization"/)
   assert.match(robots, /User-agent: \*\nAllow: \//)
-  assert.match(robots, /Sitemap: https:\/\/portfolio-tau-seven-199mu3aht5\.vercel\.app\/sitemap\.xml/)
-  assert.match(sitemap, /<loc>https:\/\/portfolio-tau-seven-199mu3aht5\.vercel\.app\/<\/loc>/)
+  assert.match(robots, /Sitemap: https:\/\/devspace-work\.vercel\.app\/sitemap\.xml/)
+  assert.match(sitemap, /<loc>https:\/\/devspace-work\.vercel\.app\/<\/loc>/)
 })
