@@ -23,6 +23,8 @@
       "reviews": {
         "title": "Что говорят клиенты",
         "intro": "Отзывы о запусках, доработках и долгосрочной работе с DevSpace.",
+        "caseLabel": "ОТЗЫВ КЛИЕНТА",
+        "scrollHint": "ЛИСТАЙТЕ",
         "controlsLabel": "Навигация по отзывам",
         "prev": "Предыдущие отзывы",
         "next": "Следующие отзывы",
@@ -64,6 +66,8 @@
       "reviews": {
         "title": "What clients say",
         "intro": "Feedback on launches, product improvements, and long-term work with DevSpace.",
+        "caseLabel": "CLIENT REVIEW",
+        "scrollHint": "SCROLL",
         "controlsLabel": "Review navigation",
         "prev": "Previous reviews",
         "next": "Next reviews",
@@ -105,6 +109,8 @@
       "reviews": {
         "title": "Ce spun clientii",
         "intro": "Feedback despre lansari, dezvoltari ulterioare si colaborarea pe termen lung cu DevSpace.",
+        "caseLabel": "RECENZIE CLIENT",
+        "scrollHint": "DERULATI",
         "controlsLabel": "Navigare printre recenzii",
         "prev": "Recenziile precedente",
         "next": "Recenziile urmatoare",

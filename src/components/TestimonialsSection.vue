@@ -1,29 +1,37 @@
 <script setup>
-import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import ArrowIcon from './ArrowIcon.vue'
 
-defineProps({
+const props = defineProps({
   content: { type: Object, required: true },
 })
 
 const rail = ref(null)
-const canScrollPrev = ref(false)
-const canScrollNext = ref(true)
+const currentIndex = ref(0)
+const total = computed(() => props.content.items.length)
+const canScrollPrev = computed(() => currentIndex.value > 0)
+const canScrollNext = computed(() => currentIndex.value < total.value - 1)
+const currentNumber = computed(() => String(currentIndex.value + 1).padStart(2, '0'))
+const totalNumber = computed(() => String(total.value).padStart(2, '0'))
+const progressWidth = computed(() => `${((currentIndex.value + 1) / total.value) * 100}%`)
 let resizeObserver
 
 const updateScrollState = () => {
   const element = rail.value
   if (!element) return
 
-  canScrollPrev.value = element.scrollLeft > 4
-  canScrollNext.value = element.scrollLeft + element.clientWidth < element.scrollWidth - 4
+  currentIndex.value = Math.min(
+    total.value - 1,
+    Math.max(0, Math.round(element.scrollLeft / Math.max(element.clientWidth, 1))),
+  )
 }
 
 const scrollReviews = (direction) => {
   const element = rail.value
   if (!element) return
 
-  element.scrollBy({ left: direction * element.clientWidth * 0.78, behavior: 'smooth' })
+  const nextIndex = Math.min(total.value - 1, Math.max(0, currentIndex.value + direction))
+  element.scrollTo({ left: nextIndex * element.clientWidth, behavior: 'smooth' })
 }
 
 onMounted(() => {
@@ -37,29 +45,49 @@ onBeforeUnmount(() => resizeObserver?.disconnect())
 
 <template>
   <section id="reviews" class="testimonials section-pad">
-    <div class="testimonials__heading">
+    <aside class="testimonials__aside">
+      <span class="testimonials__brand">DEV/SPACE</span>
       <div>
         <h2>{{ content.title }}</h2>
         <p>{{ content.intro }}</p>
       </div>
-      <div class="testimonials__controls" role="group" :aria-label="content.controlsLabel">
-        <button type="button" :disabled="!canScrollPrev" :aria-label="content.prev" @click="scrollReviews(-1)">
-          <ArrowIcon direction="left" />
-        </button>
-        <button type="button" :disabled="!canScrollNext" :aria-label="content.next" @click="scrollReviews(1)">
-          <ArrowIcon direction="right" />
-        </button>
+      <div class="testimonials__index" aria-live="polite">
+        <strong>{{ currentNumber }}</strong>
+        <span>/ {{ totalNumber }}</span>
       </div>
-    </div>
+    </aside>
 
-    <div ref="rail" class="testimonials__rail" tabindex="0" @scroll.passive="updateScrollState">
-      <article v-for="review in content.items" :key="review.author" class="testimonial">
-        <p>{{ review.text }}</p>
-        <a :href="`https://t.me/${review.author.slice(1)}`" target="_blank" rel="noreferrer">
-          {{ review.author }}
-          <ArrowIcon />
-        </a>
-      </article>
+    <div class="testimonials__case">
+      <div class="testimonials__case-label">
+        <span>{{ content.caseLabel }}</span>
+        <span>{{ content.scrollHint }}</span>
+      </div>
+
+      <div ref="rail" class="testimonials__rail" tabindex="0" @scroll.passive="updateScrollState">
+        <article v-for="review in content.items" :key="review.author" class="testimonial">
+          <span class="testimonial__quote" aria-hidden="true">“</span>
+          <p>{{ review.text }}</p>
+          <a :href="`https://t.me/${review.author.slice(1)}`" target="_blank" rel="noreferrer">
+            <span class="testimonial__avatar" aria-hidden="true">{{ review.author.charAt(1).toUpperCase() }}</span>
+            <span>{{ review.author }}</span>
+            <ArrowIcon />
+          </a>
+        </article>
+      </div>
+
+      <div class="testimonials__footer">
+        <div class="testimonials__progress" aria-hidden="true">
+          <span :style="{ width: progressWidth }"></span>
+        </div>
+        <div class="testimonials__controls" role="group" :aria-label="content.controlsLabel">
+          <button type="button" :disabled="!canScrollPrev" :aria-label="content.prev" @click="scrollReviews(-1)">
+            <ArrowIcon direction="left" />
+          </button>
+          <button type="button" :disabled="!canScrollNext" :aria-label="content.next" @click="scrollReviews(1)">
+            <ArrowIcon direction="right" />
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 </template>
