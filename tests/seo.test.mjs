@@ -13,7 +13,7 @@ test('publishes crawlable metadata for the production domain', async () => {
   ])
 
   assert.match(html, /<meta name="robots" content="index, follow"/)
-  assert.match(html, /<meta name="google-site-verification" content="dYSAB2nHMK9VrUDgEmLD3P8K_I3RoVNpdbuX-42UVHc"/)
+  assert.match(html, /<meta name="google-site-verification" content="8Ru4OeBUfwRgkIYjkVoMwzxLHJ0YRdHm23GvlRJX7aY"/)
   assert.match(html, new RegExp(`<link rel="canonical" href="${domain}"`))
   assert.match(html, new RegExp(`<meta property="og:url" content="${domain}"`))
   assert.match(html, /"@type": "Organization"/)
