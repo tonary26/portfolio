@@ -11,9 +11,7 @@ const currentIndex = ref(0)
 const total = computed(() => props.content.items.length)
 const canScrollPrev = computed(() => currentIndex.value > 0)
 const canScrollNext = computed(() => currentIndex.value < total.value - 1)
-const currentNumber = computed(() => String(currentIndex.value + 1).padStart(2, '0'))
-const totalNumber = computed(() => String(total.value).padStart(2, '0'))
-const progressWidth = computed(() => `${((currentIndex.value + 1) / total.value) * 100}%`)
+const progressScale = computed(() => (currentIndex.value + 1) / total.value)
 let resizeObserver
 
 const updateScrollState = () => {
@@ -51,10 +49,6 @@ onBeforeUnmount(() => resizeObserver?.disconnect())
         <h2>{{ content.title }}</h2>
         <p>{{ content.intro }}</p>
       </div>
-      <div class="testimonials__index" aria-live="polite">
-        <strong>{{ currentNumber }}</strong>
-        <span>/ {{ totalNumber }}</span>
-      </div>
     </aside>
 
     <div class="testimonials__case">
@@ -77,7 +71,7 @@ onBeforeUnmount(() => resizeObserver?.disconnect())
 
       <div class="testimonials__footer">
         <div class="testimonials__progress" aria-hidden="true">
-          <span :style="{ width: progressWidth }"></span>
+          <span :style="{ transform: `scaleX(${progressScale})` }"></span>
         </div>
         <div class="testimonials__controls" role="group" :aria-label="content.controlsLabel">
           <button type="button" :disabled="!canScrollPrev" :aria-label="content.prev" @click="scrollReviews(-1)">
