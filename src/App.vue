@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import ArrowIcon from './components/ArrowIcon.vue'
 import ProjectCard from './components/ProjectCard.vue'
 import ProjectDrawer from './components/ProjectDrawer.vue'
+import TestimonialsSection from './components/TestimonialsSection.vue'
 import { filters, projects } from './data/projects'
 import i18n from './data/i18n.json'
 
@@ -109,6 +110,7 @@ onBeforeUnmount(() => {
       <nav :class="{ open: mobileMenu }">
         <button type="button" @click="scrollTo('projects')">{{ t.nav.projects }}</button>
         <button type="button" @click="scrollTo('services')">{{ t.nav.services }}</button>
+        <button type="button" @click="scrollTo('reviews')">{{ t.nav.reviews }}</button>
         <button class="nav-contact" type="button" @click="scrollTo('contact')">{{ t.nav.contact }}</button>
       </nav>
       <div class="header-actions">
@@ -156,6 +158,8 @@ onBeforeUnmount(() => {
         <section id="services" class="capabilities section-pad">
           <div v-for="service in t.services" :key="service.title" class="capability-row reveal"><h3>{{ service.title }}</h3><p>{{ service.text }}</p></div>
         </section>
+
+        <TestimonialsSection :key="currentLanguage" :content="t.reviews" />
       </div>
 
       <section id="contact" class="contact-section section-pad">

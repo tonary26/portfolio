@@ -6,7 +6,7 @@
   ],
   "messages": {
     "ru": {
-      "nav": { "projects": "Проекты", "services": "Компетенции", "contact": "Контакты", "menu": "Меню" },
+      "nav": { "projects": "Проекты", "services": "Компетенции", "reviews": "Отзывы", "contact": "Контакты", "menu": "Меню" },
       "hero": { "aria": "От идеи – до продакшена", "first": "ОТ ИДЕИ –", "second": "ДО ПРОДАКШЕНА", "cta": "Смотреть работы" },
       "filters": { "all": "Все проекты", "apps": "Игры / приложения", "web": "Web-системы", "bots": "Telegram-боты" },
       "sections": { "projects": "Проекты" },
@@ -20,6 +20,21 @@
         { "title": "Architecture & Data", "text": "Проектирование бизнес-логики, микросервисов, баз данных, ролей доступа и технической документации." },
         { "title": "Deploy & Support", "text": "Docker, CI/CD, AWS, настройка сервера и окружения, выгрузка на ваш хостинг и поддержка после запуска." }
       ],
+      "reviews": {
+        "title": "Что говорят клиенты",
+        "intro": "Отзывы о запусках, доработках и долгосрочной работе с DevSpace.",
+        "controlsLabel": "Навигация по отзывам",
+        "prev": "Предыдущие отзывы",
+        "next": "Следующие отзывы",
+        "items": [
+          { "author": "@Kurull1210", "text": "Работали вместе около полутора месяцев. За это время ребята разработали для нас около шести крипто-ботов, а также регулярно дорабатывали существующий сайт: добавляли новый функционал, создавали страницы и быстро вносили необходимые изменения. Всегда были на связи, оперативно реагировали на задачи и предлагали хорошие решения, если возникали вопросы." },
+          { "author": "@slattymercilessclown27th", "text": "Заказывал сервис для поиска объявлений на Binance P2P. Всё, что просил, сделали: фильтр по лимитам и цене, уведомления без повторов, команды запуска и остановки. Также развернули всё на сервере. По работе всё нормально, команды работают." },
+          { "author": "@Artur_the1", "text": "Быстро переработали сайт, сделали проще и дешевле. Раньше отдавал в шесть раз больше за год, теперь почти ничего. За первую неделю работы сайта пришло клиентов больше, чем за два месяца. Очень доволен работой." },
+          { "author": "@paymentverif", "text": "Заказывал доработку трёх сайтов на WooCommerce. Работу выполнили быстро и качественно. Отличная коммуникация, профессиональный подход, адекватные цены. Важно, что исполнитель не пропадает после получения оплаты и идёт навстречу в доработках. Бонусом оптимизировали файлы на хостинге. Рекомендую!" },
+          { "author": "@ailtishda", "text": "Отличные программисты, сделали офигенный сайт за приятную цену, прислушивались к пожеланиям и шли на уступки. Спасибо, ребята 🙏" },
+          { "author": "@thoughtawful", "text": "Успешно реализовали два приложения на Android точно в срок. Всё сделано строго по требованиям, в процессе работы всегда были на связи и оперативно реагировали на правки." }
+        ]
+      },
       "contact": { "title": "Есть задача?", "telegram": "Обсудить в Telegram", "top": "Наверх" },
       "projectLabels": {
         "more": "Подробнее о проекте",
@@ -32,7 +47,7 @@
       }
     },
     "en": {
-      "nav": { "projects": "Projects", "services": "Expertise", "contact": "Contact", "menu": "Menu" },
+      "nav": { "projects": "Projects", "services": "Expertise", "reviews": "Reviews", "contact": "Contact", "menu": "Menu" },
       "hero": { "aria": "From idea to production", "first": "FROM IDEA -", "second": "TO PRODUCTION", "cta": "View work" },
       "filters": { "all": "All projects", "apps": "Games & apps", "web": "Web systems", "bots": "Telegram bots" },
       "sections": { "projects": "Projects" },
@@ -46,6 +61,21 @@
         { "title": "Architecture & Data", "text": "Business logic, microservices, databases, access roles, system architecture, and technical documentation." },
         { "title": "Deploy & Support", "text": "Docker, CI/CD, AWS, server and environment setup, hosting deployment, and post-launch support." }
       ],
+      "reviews": {
+        "title": "What clients say",
+        "intro": "Feedback on launches, product improvements, and long-term work with DevSpace.",
+        "controlsLabel": "Review navigation",
+        "prev": "Previous reviews",
+        "next": "Next reviews",
+        "items": [
+          { "author": "@Kurull1210", "text": "We worked together for about a month and a half. During that time, the team built around six crypto bots for us and regularly improved our existing website: adding new functionality, creating pages, and quickly making the changes we needed. They were always available, responded promptly, and suggested strong solutions whenever questions came up." },
+          { "author": "@slattymercilessclown27th", "text": "I ordered a service for finding listings on Binance P2P. They delivered everything I asked for: filters by limits and price, deduplicated notifications, and start and stop commands. They also deployed everything to the server. It all works well, including the commands." },
+          { "author": "@Artur_the1", "text": "They quickly rebuilt the website and made it simpler and less expensive. I used to pay six times more per year; now the cost is minimal. In the first week after launch, the website brought in more clients than during the previous two months. I am very happy with the work." },
+          { "author": "@paymentverif", "text": "I ordered improvements for three WooCommerce websites. The work was completed quickly and to a high standard. Great communication, a professional approach, and fair pricing. Importantly, the developer did not disappear after payment and was accommodating with follow-up changes. They also optimized the hosting files as a bonus. Recommended!" },
+          { "author": "@ailtishda", "text": "Excellent developers. They built an awesome website for a great price, listened to our requests, and were flexible throughout the work. Thank you, guys 🙏" },
+          { "author": "@thoughtawful", "text": "They successfully delivered two Android applications right on schedule. Everything was built exactly to the requirements, and throughout the project they stayed available and responded quickly to revisions." }
+        ]
+      },
       "contact": { "title": "Have a task?", "telegram": "Discuss in Telegram", "top": "Back to top" },
       "projectLabels": {
         "more": "Project details",
@@ -58,7 +88,7 @@
       }
     },
     "ro": {
-      "nav": { "projects": "Proiecte", "services": "Competente", "contact": "Contact", "menu": "Meniu" },
+      "nav": { "projects": "Proiecte", "services": "Competente", "reviews": "Recenzii", "contact": "Contact", "menu": "Meniu" },
       "hero": { "aria": "De la idee la productie", "first": "DE LA IDEE -", "second": "LA PRODUCTIE", "cta": "Vezi lucrarile" },
       "filters": { "all": "Toate proiectele", "apps": "Jocuri si aplicatii", "web": "Sisteme web", "bots": "Boti Telegram" },
       "sections": { "projects": "Proiecte" },
@@ -72,6 +102,21 @@
         { "title": "Architecture & Data", "text": "Proiectarea logicii de business, microserviciilor, bazelor de date, rolurilor de acces si documentatiei tehnice." },
         { "title": "Deploy & Support", "text": "Docker, CI/CD, AWS, configurarea serverului si mediului, publicare pe hosting si suport dupa lansare." }
       ],
+      "reviews": {
+        "title": "Ce spun clientii",
+        "intro": "Feedback despre lansari, dezvoltari ulterioare si colaborarea pe termen lung cu DevSpace.",
+        "controlsLabel": "Navigare printre recenzii",
+        "prev": "Recenziile precedente",
+        "next": "Recenziile urmatoare",
+        "items": [
+          { "author": "@Kurull1210", "text": "Am lucrat impreuna aproximativ o luna si jumatate. In acest timp, echipa a dezvoltat pentru noi aproximativ sase boti crypto si a imbunatatit constant site-ul existent: a adaugat functionalitati noi, a creat pagini si a facut rapid modificarile necesare. Au fost mereu disponibili, au raspuns prompt si au propus solutii bune atunci cand apareau intrebari." },
+          { "author": "@slattymercilessclown27th", "text": "Am comandat un serviciu pentru cautarea anunturilor pe Binance P2P. Au realizat tot ce am cerut: filtre dupa limite si pret, notificari fara duplicate si comenzi de pornire si oprire. De asemenea, au instalat totul pe server. Totul functioneaza bine, inclusiv comenzile." },
+          { "author": "@Artur_the1", "text": "Au refacut rapid site-ul si l-au facut mai simplu si mai ieftin. Inainte plateam de sase ori mai mult pe an, iar acum costurile sunt minime. In prima saptamana de functionare, site-ul a adus mai multi clienti decat in cele doua luni precedente. Sunt foarte multumit de rezultat." },
+          { "author": "@paymentverif", "text": "Am comandat imbunatatiri pentru trei site-uri WooCommerce. Lucrarea a fost realizata rapid si calitativ. Comunicare excelenta, abordare profesionista si preturi corecte. Este important ca executantul nu dispare dupa plata si este deschis la ajustari. Ca bonus, a optimizat fisierele de pe hosting. Recomand!" },
+          { "author": "@ailtishda", "text": "Programatori excelenti. Au realizat un site foarte reusit la un pret bun, au ascultat dorintele noastre si au fost flexibili pe parcursul colaborarii. Multumim, baieti 🙏" },
+          { "author": "@thoughtawful", "text": "Au realizat cu succes doua aplicatii Android exact la termen. Totul a fost facut strict conform cerintelor, iar pe parcursul proiectului au fost mereu disponibili si au reactionat rapid la modificari." }
+        ]
+      },
       "contact": { "title": "Ai un task?", "telegram": "Discutam pe Telegram", "top": "Sus" },
       "projectLabels": {
         "more": "Detalii proiect",
