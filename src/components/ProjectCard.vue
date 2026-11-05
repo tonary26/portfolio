@@ -11,7 +11,7 @@ defineEmits(['open'])
 </script>
 
 <template>
-  <article class="project-card reveal" :class="`project-card--${position}`" :data-accent="project.accent">
+  <article class="project-card" :class="`project-card--${position}`" :data-accent="project.accent">
     <div class="project-card__button">
       <div class="project-card__copy">
         <div class="project-card__meta"><span>{{ project.type }}</span></div>

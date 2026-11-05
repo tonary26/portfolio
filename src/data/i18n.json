@@ -86,6 +86,30 @@
   },
   "projectTranslations": {
     "en": {
+      "sosed-gotovit": {
+        "type": "WordPress / E-commerce",
+        "title": "Sosed Gotovit",
+        "subtitle": "Online store for gastro boxes and desserts with delivery across Saint Petersburg",
+        "description": "Ready-made set catalog, build-your-own box, cart, and checkout.",
+        "long": "Sosed Gotovit brings gastro boxes, chocolate-covered strawberries, desserts, and party sets into one storefront. Customers can choose a ready-made set or build their own box, then place an order for delivery across Saint Petersburg and the Leningrad region.",
+        "features": ["Gastro box, dessert, and party set catalog", "Build-your-own box", "Cart and checkout", "Delivery across Saint Petersburg and the region"]
+      },
+      "motiondeck": {
+        "type": "Flutter / Sports",
+        "subtitle": "Sports tools in one fast workspace",
+        "description": "Interval timer, rep and set counter, scoreboard, and pace tracker for training and games.",
+        "long": "MotionDeck brings essential sports tools into one focused interface. It supports solo workouts, games, and coaches working with groups.",
+        "features": ["Interval timer", "Rep and set counter", "Compact game scoreboard", "Workout pace tracker"],
+        "externalLabel": "Open in Google Play"
+      },
+      "eaglebreath": {
+        "type": "Flutter / Wellness",
+        "subtitle": "A visual guide for calm breathing practice",
+        "description": "The breathing circle expands on inhale, pauses, and contracts on exhale.",
+        "long": "EagleBreath helps users find a comfortable rhythm and complete a session without watching a timer. Circle size, phase labels, and countdown stay synchronized through inhale, hold, and exhale.",
+        "features": ["Animated breathing circle", "Inhale, hold, and exhale phases", "Clear labels and countdown", "Calm flow with no unnecessary actions"],
+        "externalLabel": "Open in Google Play"
+      },
       "hotel-rai": {
         "type": "Website",
         "subtitle": "Premium hotel website in Tetyushi",
@@ -172,6 +196,30 @@
       }
     },
     "ro": {
+      "sosed-gotovit": {
+        "type": "WordPress / E-commerce",
+        "title": "Sosed Gotovit",
+        "subtitle": "Magazin online de gastrobox-uri si deserturi cu livrare in Sankt Petersburg",
+        "description": "Catalog de seturi gata pregatite, configurator pentru propriul box, cos si checkout.",
+        "long": "Sosed Gotovit reuneste gastrobox-uri, capsuni in ciocolata, deserturi si seturi pentru evenimente intr-o singura vitrina. Clientii pot alege un set gata pregatit sau isi pot configura propriul box, apoi pot comanda livrarea in Sankt Petersburg si regiunea Leningrad.",
+        "features": ["Catalog de gastrobox-uri, deserturi si seturi", "Configurator pentru propriul box", "Cos si checkout", "Livrare in Sankt Petersburg si regiune"]
+      },
+      "motiondeck": {
+        "type": "Flutter / Sport",
+        "subtitle": "Instrumente sportive intr-un singur spatiu rapid",
+        "description": "Timer pe intervale, contor de repetari si seturi, tabela de scor si monitorizarea ritmului.",
+        "long": "MotionDeck reuneste instrumentele sportive esentiale intr-o interfata concentrata. Aplicatia este potrivita pentru antrenamente individuale, jocuri si antrenori care lucreaza cu grupuri.",
+        "features": ["Timer pe intervale", "Contor de repetari si seturi", "Tabela compacta de scor", "Monitorizarea ritmului de antrenament"],
+        "externalLabel": "Deschide in Google Play"
+      },
+      "eaglebreath": {
+        "type": "Flutter / Wellness",
+        "subtitle": "Ghid vizual pentru exercitii de respiratie linistite",
+        "description": "Cercul se extinde la inspiratie, se opreste in pauza si se contracta la expiratie.",
+        "long": "EagleBreath ajuta utilizatorii sa gaseasca un ritm confortabil si sa parcurga sesiunea fara sa urmareasca un timer. Dimensiunea cercului, etichetele fazelor si numaratoarea inversa raman sincronizate.",
+        "features": ["Cerc de respiratie animat", "Faze de inspiratie, pauza si expiratie", "Etichete clare si numaratoare inversa", "Scenariu calm fara actiuni inutile"],
+        "externalLabel": "Deschide in Google Play"
+      },
       "hotel-rai": {
         "type": "Website",
         "subtitle": "Site premium pentru un hotel din Tetyushi",

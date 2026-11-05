@@ -7,6 +7,21 @@ export const filters = [
 
 export const projects = [
   {
+    id: 'sosed-gotovit',
+    category: 'web',
+    type: 'WordPress / E-commerce',
+    title: 'Сосед готовит',
+    subtitle: 'Интернет-магазин гастробоксов и десертов с доставкой по Санкт-Петербургу',
+    description: 'Каталог готовых наборов, конструктор собственного бокса, корзина и оформление заказа.',
+    long: '«Сосед готовит» объединяет гастробоксы, клубнику в шоколаде, десерты и сеты в одной витрине. Покупатель может выбрать готовый набор или собрать собственный бокс, оформить заказ и доставку по Санкт-Петербургу и Ленинградской области.',
+    stack: ['WordPress', 'WooCommerce', 'Elementor', 'PHP', 'Responsive UI'],
+    features: ['Каталог гастробоксов, десертов и сетов', 'Конструктор собственного бокса', 'Корзина и оформление заказа', 'Доставка по Санкт-Петербургу и области'],
+    visual: 'sosed-gotovit',
+    media: new URL('../../gif/sosedgotoviti.mp4', import.meta.url).href,
+    link: 'https://sosedgotovit.ru/',
+    accent: 'yellow',
+  },
+  {
     id: 'motiondeck',
     category: 'apps',
     type: 'Flutter / Спорт',

@@ -34,6 +34,12 @@ test('includes MotionDeck and EagleBreath as playable mobile app cases', async (
   assert.equal(eagleBreath.externalLabel, 'Открыть в Google Play')
   assert.match(eagleBreath.media, /eaglebreath\.mp4$/)
 
+  for (const language of ['en', 'ro']) {
+    for (const project of projects) {
+      assert.ok(i18n.projectTranslations[language][project.id], `${project.id} is missing ${language} translation`)
+    }
+  }
+
   await Promise.all([
     access(new URL('../gif/motiondeck.mp4', import.meta.url)),
     access(new URL('../gif/eaglebreath.mp4', import.meta.url)),
@@ -42,4 +48,6 @@ test('includes MotionDeck and EagleBreath as playable mobile app cases', async (
   assert.match(card, /project\.externalLabel \|\| labels\.open/)
   assert.match(drawer, /project\.externalLabel \|\| labels\.openReady/)
   assert.doesNotMatch(app, /class="marquee"/)
+  assert.doesNotMatch(card, /project-card reveal/)
+  assert.doesNotMatch(app, /filter-swap/)
 })

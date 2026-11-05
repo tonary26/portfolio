@@ -11,7 +11,6 @@ const activeFilter = ref('all')
 const selectedProject = ref(null)
 const mobileMenu = ref(false)
 let revealObserver
-const mobileQuery = window.matchMedia('(max-width: 620px)')
 
 const { languages, messages, projectTranslations } = i18n
 
@@ -44,7 +43,6 @@ const cardPosition = (index) => {
 const setupReveals = () => {
   revealObserver?.disconnect()
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  const mobile = mobileQuery.matches
   document.documentElement.classList.toggle('no-motion', reduced)
   document.documentElement.classList.toggle('motion-ready', !reduced)
 
@@ -55,34 +53,15 @@ const setupReveals = () => {
     return
   }
 
-  document.querySelectorAll('.project-card.reveal').forEach((card) => {
-    const shown = card.classList.contains('is-visible')
-      || (card.classList.contains('is-copy-visible') && card.classList.contains('is-visual-visible'))
-    if (shown) card.classList.add('is-visible', 'is-copy-visible', 'is-visual-visible')
-  })
-
   revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return
-      if (entry.target.classList.contains('project-card__copy')) {
-        entry.target.closest('.project-card')?.classList.add('is-copy-visible')
-      } else if (entry.target.classList.contains('project-visual')) {
-        entry.target.closest('.project-card')?.classList.add('is-visual-visible')
-      } else {
-        entry.target.classList.add('is-visible')
-      }
+      entry.target.classList.add('is-visible')
       revealObserver?.unobserve(entry.target)
     })
   }, { threshold: 0.01, rootMargin: '0px 0px 18% 0px' })
 
   document.querySelectorAll('.reveal').forEach((element) => {
-    if (mobile && element.classList.contains('project-card')) {
-      const copy = element.querySelector('.project-card__copy')
-      const visual = element.querySelector('.project-visual')
-      if (copy) revealObserver.observe(copy)
-      if (visual) revealObserver.observe(visual)
-      return
-    }
     revealObserver.observe(element)
   })
 }
@@ -110,11 +89,8 @@ const setLanguage = (language) => {
   mobileMenu.value = false
 }
 
-const onBreakpointChange = () => setupReveals()
-
 onMounted(() => {
   document.documentElement.lang = currentLanguage.value
-  mobileQuery.addEventListener('change', onBreakpointChange)
   nextTick(() => {
     animateHero()
     setupReveals()
@@ -122,7 +98,6 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  mobileQuery.removeEventListener('change', onBreakpointChange)
   revealObserver?.disconnect()
 })
 </script>
@@ -166,18 +141,16 @@ onBeforeUnmount(() => {
       <div class="paper-sheet">
         <section id="projects" class="projects-section section-pad">
           <div class="section-heading reveal"><h2>{{ t.sections.projects }}</h2><div class="filter-tabs" role="tablist" aria-label="Project filter"><button v-for="filter in localizedFilters" :key="filter.id" type="button" role="tab" :aria-selected="activeFilter === filter.id" :class="{ active: activeFilter === filter.id }" @click="setFilter(filter.id)">{{ filter.label }}</button></div></div>
-          <Transition name="filter-swap" mode="out-in" @after-enter="setupReveals">
-            <div :key="activeFilter" class="project-list">
-              <ProjectCard
-                v-for="(project, index) in filteredProjects"
-                :key="project.id"
-                :project="project"
-                :position="cardPosition(index)"
-                :labels="t.projectLabels"
-                @open="selectedProject = $event"
-              />
-            </div>
-          </Transition>
+          <div class="project-list">
+            <ProjectCard
+              v-for="(project, index) in filteredProjects"
+              :key="project.id"
+              :project="project"
+              :position="cardPosition(index)"
+              :labels="t.projectLabels"
+              @open="selectedProject = $event"
+            />
+          </div>
         </section>
 
         <section id="services" class="capabilities section-pad">
