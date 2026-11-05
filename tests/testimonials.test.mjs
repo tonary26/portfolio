@@ -16,6 +16,7 @@ test('renders six localized testimonials in an accessible horizontal rail', asyn
     assert.ok(i18n.messages[language].nav.reviews)
     assert.ok(i18n.messages[language].reviews.prev)
     assert.ok(i18n.messages[language].reviews.next)
+    assert.ok(i18n.messages[language].reviews.profileLabel)
   }
 
   assert.match(app, /scrollTo\('reviews'\)/)
@@ -23,6 +24,7 @@ test('renders six localized testimonials in an accessible horizontal rail', asyn
   assert.match(component, /scroll-snap|testimonials__rail/)
   assert.match(component, /:disabled="!canScrollPrev"/)
   assert.match(component, /https:\/\/t\.me\//)
+  assert.match(component, /content\.profileLabel/)
   assert.match(component, /@touchstart\.passive="handleTouchStart"/)
   assert.match(component, /@touchend\.passive="handleTouchEnd"/)
   assert.match(component, /settleOnNearestReview/)

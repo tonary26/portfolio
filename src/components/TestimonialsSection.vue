@@ -132,10 +132,18 @@ onBeforeUnmount(() => {
         <article v-for="review in content.items" :key="review.author" class="testimonial">
           <span class="testimonial__quote" aria-hidden="true">“</span>
           <p>{{ review.text }}</p>
-          <a :href="`https://t.me/${review.author.slice(1)}`" target="_blank" rel="noreferrer">
+          <a
+            :href="`https://t.me/${review.author.slice(1)}`"
+            target="_blank"
+            rel="noreferrer"
+            :aria-label="`${content.profileLabel}: ${review.author}`"
+          >
             <span class="testimonial__avatar" aria-hidden="true">{{ review.author.charAt(1).toUpperCase() }}</span>
-            <span>{{ review.author }}</span>
-            <ArrowIcon />
+            <span class="testimonial__author-copy">
+              <strong>{{ review.author }}</strong>
+              <small>{{ content.profileLabel }}</small>
+            </span>
+            <span class="testimonial__profile-arrow" aria-hidden="true"><ArrowIcon /></span>
           </a>
         </article>
       </div>
