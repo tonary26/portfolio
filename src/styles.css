@@ -200,9 +200,9 @@ footer { display: flex; align-items: center; justify-content: flex-end; padding-
 .drawer-close { display: flex; align-items: center; gap: 10px; margin-left: auto; color: var(--muted); font-size: 12px; font-weight: 700; }
 .drawer-close span { color: var(--ink); font-size: 25px; font-weight: 400; }
 .drawer-hero { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(30px, 5vw, 80px); align-items: stretch; margin-top: 25px; }
-.drawer-hero > div:first-child { display: flex; flex-direction: column; justify-content: flex-end; }
+.drawer-hero > div:first-child { display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
 .drawer-hero p { color: var(--muted); font: 600 10px/1 var(--font-meta); text-transform: uppercase; letter-spacing: 0.08em; }
-.drawer-hero h2 { margin-top: auto; font: 800 clamp(44px, 6vw, 88px)/0.94 var(--font-section); letter-spacing: -0.035em; text-wrap: balance; }
+.drawer-hero h2 { max-width: 100%; margin-top: auto; overflow-wrap: anywhere; font: 800 clamp(44px, 6vw, 88px)/0.94 var(--font-section); letter-spacing: -0.035em; text-wrap: balance; }
 .drawer-hero > div > span { margin-top: 18px; font-size: clamp(17px, 1.8vw, 23px); font-weight: 700; }
 .drawer-hero .project-visual { height: min(46vh, 480px); }
 .drawer-body { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 100px); margin-top: clamp(50px, 8vw, 100px); border-top: 1px solid var(--line); padding-top: 36px; }

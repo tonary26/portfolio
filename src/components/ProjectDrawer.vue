@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeUnmount, onMounted } from 'vue'
+import { computed, onBeforeUnmount, onMounted } from 'vue'
 import ArrowIcon from './ArrowIcon.vue'
 import ProjectVisual from './ProjectVisual.vue'
 
@@ -8,6 +8,7 @@ const props = defineProps({
   labels: { type: Object, required: true },
 })
 const emit = defineEmits(['close'])
+const titleParts = computed(() => props.project.title.split('.'))
 
 const onKey = (event) => event.key === 'Escape' && emit('close')
 onMounted(() => { window.addEventListener('keydown', onKey); document.body.classList.add('modal-open') })
@@ -19,7 +20,11 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKey); document.b
     <article class="project-drawer" role="dialog" aria-modal="true" :aria-labelledby="`drawer-${project.id}`">
       <button class="drawer-close" type="button" @click="$emit('close')" :aria-label="labels.close">{{ labels.close }} <span>×</span></button>
       <div class="drawer-hero">
-        <div><p>{{ project.type }}</p><h2 :id="`drawer-${project.id}`">{{ project.title }}</h2><span>{{ project.subtitle }}</span></div>
+        <div>
+          <p>{{ project.type }}</p>
+          <h2 :id="`drawer-${project.id}`"><span v-for="(part, index) in titleParts" :key="`${part}-${index}`">{{ part }}<template v-if="index < titleParts.length - 1">.</template><wbr v-if="index < titleParts.length - 1"></span></h2>
+          <span>{{ project.subtitle }}</span>
+        </div>
         <ProjectVisual :project="project" />
       </div>
       <div class="drawer-body">
